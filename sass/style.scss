@@ -105,8 +105,9 @@ fieldset {
                 opacity: .4;
             }
         }
-        @include d(m){
-            &:after{
+
+        @include d(m) {
+            &:after {
                 display: none;
             }
         }
@@ -129,6 +130,7 @@ fieldset {
 
         @include d(m) {
             flex-direction: column;
+            padding: 20px 5px;
         }
 
     }
@@ -140,7 +142,8 @@ fieldset {
         @include d(m) {
             margin-top: 20px;
             align-items: center;
-            margin-left: initial;
+            margin-left: 30px;
+
         }
 
         li {
@@ -157,9 +160,9 @@ fieldset {
                 p {
                     color: #583862;
 
-                    @include d(m) {
+                    /* @include d(m) {
                         display: none;
-                    }
+                    } */
                 }
             }
         }
@@ -208,17 +211,33 @@ fieldset {
             background-image: url(../img/whats.svg);
         }
 
-        .menu__email {
+        .menu__whats:before {
+            content: '';
+            background-image: url(../img/phone.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            position: relative;
+            left: -35px;
+        }
+
+        /*  .menu__email {
             background-image: url(../img/mail.svg) !important;
         }
 
         .menu__phone {
             background-image: url(../img/phone.svg) !important;
-        }
+        } */
     }
 
     .dropdown {
         margin-left: 30px;
+
+        @include d(m) {
+            margin-left: 10px;
+        }
 
         i {
             background-repeat: no-repeat;
