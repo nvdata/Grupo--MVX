@@ -62,7 +62,7 @@ fieldset {
             margin-bottom: 15px;
             color: black;
             text-shadow: initial;
-            text-align:start;
+            text-align: start;
 
         }
 
@@ -70,6 +70,11 @@ fieldset {
 
     p:last-child {
         margin-top: 40px;
+
+        @include d(m) {
+            order: -1;
+            text-align: center;
+        }
     }
 }
 
@@ -296,7 +301,8 @@ video {
     label {
         margin-top: 10px;
         color: white;
-        @include d(m){
+
+        @include d(m) {
             color: black;
             font-weight: bold;
         }
