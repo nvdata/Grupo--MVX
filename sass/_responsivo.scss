@@ -20,6 +20,12 @@ $ss-device: 330px; //small small
       //acima do medio
       @content;
     }
+  }
+  @else if $size==lmax {
+    @media screen and (max-width: $l-device) {
+      //acima do medio
+      @content;
+    }
   } @else if $size==m {
     @media screen and (max-width: $m-device ) {
       //abaixo do medio
