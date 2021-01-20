@@ -161,6 +161,13 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
     <script>
+        var altura = 500
+        function alturaConst(){
+            if(window.innerHeight >= 600){
+                altura = 800;
+            }
+        }
+        alturaConst();
         document.querySelector("video").controls = false
 
          //scroll suave
@@ -168,10 +175,9 @@
             window.scroll({
                 behavior: 'smooth',
                 left: 0,
-                top: element.offsetTop - 500,
+                top: element.offsetTop - altura,
             });
         }
-
         document.querySelector(".mouse").addEventListener('click', () => {
             scrollTo(document.getElementById("form")); //scrool suave
         });
