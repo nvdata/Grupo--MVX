@@ -3,186 +3,461 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrbanCamp</title>
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
 
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" />
 
-
+    <title>Urban Camp</title>
 </head>
 
-<body id="captacao">
-   
-    <main id="intro">
-       <div class="video__container">
-        <video id="video" loop="true" muted autoplay playsinline src="img/video-reduced.mp4"></video>  
-        <a class="mouse" href="#form"><img src="img/mouse-down.png" alt="mouse"></a>
-       </div>
-
-         
-        <div class="container">           
-            <div class="d-flex texto" id="form">
-                <p> Bem vindos ao mundo novo onde as interações online fazem cada vez mais parte do nosso dia-a-dia, nos
-                    levando a
-                    criar conexões interepessoais e culturais através da língua inglesa.
-
-                </p>
-
-                <p>
-                    Somos a primeira empresa a desenvolver uma abordagem nativa com metodologia multissensorial e
-                    conteúdos
-                    customizados para diferentes interesses e alunos de 4 a 100 anos.</p>
-
-                <p> A Urban Camp vai além de ensinar Inglês, o nosso ambiente permite uma imersão onde o aluno ganha
-                    confiança e se
-                    sente á vontade para se comunicar em qualquer situação, seja ela trabalho, educação ou lazer.</p>
+<body class="body__home">
 
 
-                <p>
-                    <strong> Nossa plataforma está em construção. Deixe o seu contato no formulário abaixo para receber mais informações.</strong>
 
-                </p>
-                <div class="form">
-                    <form method="get" action="#" class="form__nome">
-                        <fieldset class="d-flex">
+    <main id="page__home">
+
+        <section class="intro">
+            <div class="video__container">
+                <video id="video" loop="true" muted autoplay playsinline src="/assets/img/video-reduced.mp4"
+                    preload="metadata"></video>
+            </div>
+
+            <a data-aos="fade-up" data-aos-delay="800" data-aos-duration="1200" class="mouse" href="#"><img
+                    src="/assets/img/mouse.svg" alt="mouse"></a>
+
+            <div class="intro__botoes">
+                <a data-aos="fade-up" data-aos-duration="600" href="#">Para
+                    Alunos</a>
+                <a data-aos="fade-up" data-aos-duration="600" data-aos-delay="400" href="#">Para
+                    Empresas</a>
+            </div>
+
+        </section>
+
+        <section id="who">
+            <svg class="icon-bolinhas">
+                <use xlink:href="assets/img/ornas/symbol-defs.svg#icon-bolinhas"></use>
+            </svg>
+            <div class="who" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <div class="container">
+                    <h1>Who we are</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Oratio me istius philosophi non
+                        offendit; At multis se probavit. Si quicquam extra virtutem habeatur in bonis. Magni enim
+                        aestimabat pecuniam non modo non contra leges, sed etiam legibus partam. Habes, inquam, Cato,
+                        formam eorum, de quibus loquor, philosophorum. Duo Reges: constructio interrete. Ex quo, id quod
+                        omnes expetunt, beate vivendi ratio inveniri et comparari potest. Nec tamen ullo modo summum
+                        pecudis bonum et hominis idem mihi videri potest.
+
+                    </p>
+                    <div class="d__flex">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cursos">
+            <div class="cursos">
+                <!-- orna listras -->
+                <svg class="icon-orna-3">
+                    <use xlink:href="assets/img/ornas/symbol-defs.svg#icon-orna-3"></use>
+                </svg>
+                <!-- orna linhas -->~
+                <svg class="icon-orna-1">
+                    <use xlink:href="assets/img/ornas/symbol-defs.svg#icon-orna-1"></use>
+                </svg>
+                <div class="container">
+
+                    <div class="cursos__container">
+
+                        <div class="swiper-wrapper cursos__wrapper">
 
 
-                            <!-- nome -->
+                            <ul class="swiper-slide cursos__slide curso " data-aos="fade-right" data-aos-duration="800">
 
-                            <div class="d-flex nova__linha">
-                                <div class="campo d-flex col-lg-6">
-                                    <label class="label" for="nome">Nome</label>
-                                    <input class="input" type="text" name="nome" id="nome" required
-                                        placeholder="Seu nome">
+                                <li class="img__container"><img src="/assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul><!-- curso 1 -->
+                            <ul class="swiper-slide cursos__slide curso" data-aos="fade-right" data-aos-duration="800">
 
-                                </div>
+                                <li class="img__container"><img src="/assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+                            <ul class="swiper-slide cursos__slide curso" data-aos="fade-right" data-aos-duration="800">
 
-                                <div class="campo d-flex col-lg-6">
-                                    <label class="label" for="email">Email </label>
-                                    <input class="input" type="text" name="email" id="email" required
-                                        placeholder="Seu melhor email">
+                                <li class="img__container"><img src="/assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+                            <ul class="swiper-slide cursos__slide curso" data-aos="fade-right" data-aos-duration="800">
 
-                                </div>
-                            </div>
-                            <div class="d-flex nova__linha">
-                                <div class="campo d-flex col-lg-6">
-                                    <label class="label" for="telefone">Telefone </label>
-                                    <input class="input" type="tel" name="telefone" id="telefone" required
-                                        placeholder="(xx) xxxxx-xxxx">
-                                </div>
+                                <li class="img__container"><img src="/assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+                            <ul class="swiper-slide cursos__slide curso">
 
-                                <div class="input-group col-lg-6 ">
-                                    <select class="custom-select" id="inputGroupSelect04" required>
-                                        <option selected>Quero saber mais</option>
-                                        <option value="1">Kids - 4 anos até 10 anos (imersão ou curso)</option>
-                                        <option value="2">Pre-Teens - 11 anos a 13 anos (imersão ou curso)</option>
-                                        <option value="3">
-                                            Teens - 14 anos a 19 anos (imersão ou curso)</option>
-                                        <option value="4">
-                                            Oficinas avulsas  
-                                            </option>
-                                        <option value="5">Adulto - opções de grupos baseado em interesses e níveis. (imersão ou curso)</option>
-                                        <option value="6">Programa individual para adultos e crianças. </option>
-                                        <option value="7">Empresa - programa desenvolvido para atingir objetivos individuais ou de grupos coorporativos.</option>
-                                        <option value="8">Produtos - Slides e workbooks para pessoa física ou jurídica. (professores ou escolas) </option>
-                                        <option value="9">Escola - parcerias, treinamentos ou consultorias</option>
-                                    </select>
+                                <li class="img__container"><img src="/assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
 
-                                </div>
-                            </div>
-                            <button class="enviar col-12">
-                                Se inscrever
-                            </button>
-                        </fieldset>
+                            <ul class="swiper-slide cursos__slide curso">
 
-                    </form>
+                                <li class="img__container"><img src="/assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
 
+                            <ul class="swiper-slide cursos__slide curso">
+
+                                <li class="img__container"><img src="/assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+
+                            <ul class="swiper-slide cursos__slide curso">
+
+                                <li class="img__container"><img src="/assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+
+                            <ul class="swiper-slide cursos__slide curso">
+
+                                <li class="img__container"><img src="/assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+
+                            <ul class="swiper-slide cursos__slide curso">
+
+                                <li class="img__container"><img src="/assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+
+                            <ul class="swiper-slide cursos__slide curso">
+
+                                <li class="img__container"><img src="/assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+
+
+                        </div> <!-- wrapper -->
+
+
+
+                    </div>
+
+                    <div class="swiper-button-prev">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                        </ion-icon>
+                    </div>
+                    <div class="swiper-button-next">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+                <svg class="icon-orna-4">
+                    <use xlink:href="assets/img/ornas/symbol-defs.svg#icon-orna-4"></use>
+                </svg>
+            </div>
+
+        </section>
+
+
+        <section id="mae">
+            <div class="mae">
+                <div class="container">
+
+                    <div class="mae__wrapper">
+
+                        <div class="mae__descricao">
+                            <h2>Suspendisse pellentesque aliquan enim</h2>
+                            <p>O programa especialmente desenvolvido para elas chama-se Circle time e consiste em um
+                                trabalho em parceria com a mãe, pai, babá ou qualquer pessoa em casa com a criança (não
+                                precisa saber inglês). O objetivo é promover o estímulo sonoro da língua inglesa tendo a
+                                professora como facilitadora das atividades propostas.</p>
+                        </div>
+                        <div class="mae__descricao">
+                            <h2>Suspendisse pellentesque aliquan enim</h2>
+                            <p>O programa especialmente desenvolvido para elas chama-se Circle time e consiste em um
+                                trabalho em parceria com a mãe, pai, babá ou qualquer pessoa em casa com a criança (não
+                                precisa saber inglês). O objetivo é promover o estímulo sonoro da língua inglesa tendo a
+                                professora como facilitadora das atividades propostas.</p>
+                        </div>
+                        <div class="mae__descricao">
+                            <h2>Suspendisse pellentesque aliquan enim</h2>
+                            <p>O programa especialmente desenvolvido para elas chama-se Circle time e consiste em um
+                                trabalho em parceria com a mãe, pai, babá ou qualquer pessoa em casa com a criança (não
+                                precisa saber inglês). O objetivo é promover o estímulo sonoro da língua inglesa tendo a
+                                professora como facilitadora das atividades propostas.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mae__img">
+                    <img src="/assets/img/mae.png" alt="mae">
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+
+
+
+    <!-- MENU DESKTOP =================== -->
+    <nav class="menu__desktop menu">
+
+        <div class="container">
+
+            <div class="menu__wrapper">
+                <a class="menu__logo" href="#">
+                    <img src="assets/img/logofullurbancamp.png" alt="logo"></a>
+
+                <ul class="menu__links">
+                    <!-- <li><a class="menu__btn" href="#">Botao</a></li> -->
+
+
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Para alunos</a></li>
+                    <li><a href="#">Para empresas</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li class="menu__dropdown">
+                        <a href="#"><img src="assets/img/pais-1.svg" alt="pais">
+                            <ion-icon class="drop__icon" name="chevron-down-outline"></ion-icon>
+                        </a>
+
+                        <div id="dropdown__content">
+                            <a href="#"><img src="assets/img/pais-1.svg" alt="pais"> PT-BR</a>
+                            <a href="#"><img src="assets/img/pais-2.svg" alt="pais"> EN</a>
+
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!-- MENU MOBILE ====================== -->
+    <nav class="menu__mobile menu">
+        <div class="container">
+            <div class="menu__mobile-wrapper">
+
+                <a href="#" class="menu__logo">
+                    <img src="assets/img/logofullurbancamp.svg" alt="logo">
+                </a>
+
+                <div class="menu__icon">
+                    <div class="menu__icon-click">
+                        <!-- <p>MENU</p> -->
+                        <div class="hamburguer"><i></i></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
 
-    
-    <nav class="menu">
-        <div class="container">
-            <div class="menu__wrapper">
-                <a class="logo" href="#"><img src="img/logo.png" alt="logo"></a>
-                <ul>
-                    <li><a href="#"><span class="menu__whats"></span>
-                            <p>(21) 99797-8661</p>
-                        </a></li>
-
-                  <!--   <li><a href="#"><span class="menu__email"></span>
-                            <p>contato@urbancamp.com</p>
-                        </a></li> -->
-
-                    <!-- <li><a href="#"><span class="menu__phone"></span>
-                            <p>(21) 3333-3333</p>
-                        </a></li>
-                    <li> -->
+        <div class="atalhos">
+            <ul class="menu__links-mobile">
 
 
+                <li><a href="#">
+                        <ion-icon name="home-outline"></ion-icon>Home
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="person-outline"></ion-icon>Para alunos
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="people-outline"></ion-icon>Para empresas
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="cart-outline"></ion-icon>Produtos
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="mail-outline"></ion-icon>Fale Conosco
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="log-in-outline"></ion-icon>Login
+                    </a></li>
+                <li class="menu__dropdown-mobile">
+                    <a href="#"><img src="assets/img/pais-1.svg" alt="pais">
+                        <ion-icon class="drop__icon" name="chevron-down-outline"></ion-icon>
+                    </a>
 
-                        <div class="dropdown">
-                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="region-1"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div id="dropdown__content-mobile">
+                        <a href="#"><img src="assets/img/pais-1.svg" alt="pais"> PT-BR</a>
+                        <a href="#"><img src="assets/img/pais-2.svg" alt="pais"> EN</a>
 
-                                <a class="dropdown-item" href="#"> <i class="region-1"></i>
-                                    PT-BR</a>
-
-                                <a class="dropdown-item" href="#"> <i class="region-2"></i>
-                                    EN</a>
-
-
-
-
-                            </div>
-                        </div>
-
-                    </li>
-
-                </ul>
-            </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </nav>
+    <div class="fundo__black"></div>
 
-    <!-- bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-    </script>
-    <script>
-        var altura = 500
-        function alturaConst(){
-            if(window.innerHeight >= 600){
-                altura = 800;
-            }
-        }
-        alturaConst();
-        document.querySelector("video").controls = false
+    <!-- ion icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <!-- swiper carousel -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-         //scroll suave
-         function scrollTo(element) {
-            window.scroll({
-                behavior: 'smooth',
-                left: 0,
-                top: element.offsetTop - altura,
-            });
-        }
-        document.querySelector(".mouse").addEventListener('click', () => {
-            scrollTo(document.getElementById("form")); //scrool suave
-        });
-    </script>
+
+    <!-- aos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous"></script>
+    <!-- gsap -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+        integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"
+        integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg=="
+        crossorigin="anonymous"></script> -->
+
+    <!-- JS FRONT -->
+    <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </body>
+
 
 </html>

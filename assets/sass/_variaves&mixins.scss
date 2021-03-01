@@ -1,0 +1,132 @@
+//VARIAVEIS
+$primaria:#a0cb39;
+$secundaria:#43525a;
+$terciaria:#340e41;
+$laranja:#ff5d5d;
+
+
+.d-flex {
+    display: flex
+}
+
+//font
+@mixin font($peso:400) {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $peso;
+}
+
+//flexbox 
+@mixin flex ($justificado:space-between, $alinhamento:center, $flow:row wrap) {
+    display: flex;
+
+    flex-flow: $flow;
+    justify-content: $justificado;
+    align-items: $alinhamento;
+
+}
+
+// PROJETO ===================================================
+
+@mixin tituloGrande {
+    color: $secundaria;
+    font-size: clamp(42px, 7vw, 84px);
+    text-align: center;
+    margin: 40px auto;
+}
+
+@mixin subtitulo($alinhamento:center) {
+    color: $terciaria;
+    text-align: $alinhamento;
+    line-height: 160%;
+
+    @include d(s) {
+        font-size: 14px;
+    }
+}
+
+@mixin botao($bg:white, $color:$secundaria) {
+    border-radius: 30px;
+    padding: 15px 60px;
+    text-align: center;
+    display: inline-flex;
+    background-color: $bg;
+    color: $color;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 700;
+
+    &:hover {
+        // 
+    }
+}
+
+@mixin sombra {
+    box-shadow: 0px 20px 30px rgb(0 0 0 / 14%);
+    ;
+
+    /*  &:after {
+        content: "";
+
+        @include bg-props-contain;
+        background-image: url(/assets/img/sombra.png);
+
+        display: block;
+        width: 100%;
+        height: 40px;
+
+        position: absolute;
+        bottom: -40px;
+
+        @include d(m) {
+            bottom: -25px;
+            z-index: -999;
+        }
+    } */
+}
+
+
+//background
+@mixin bg-props-contain {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@mixin bg-props-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+// Sizing
+// ------
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// Normal & hover state
+// --------------------
+@mixin hoverer($property, $normal, $hovered) {
+
+    transition: 0.4s ease;
+
+    #{$property}: $normal;
+
+    &:hover {
+        #{$property}: $hovered;
+    }
+}
+
+
+@mixin data__logo {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 5px 10px;
+
+    img {
+        width: 130px;
+    }
+}

@@ -1,0 +1,45 @@
+// FONTE
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+@import "bootstrap__imports";
+
+
+//  assets help
+@import "../sass/utilities/assest-helper";
+
+//  RESPONSIVO
+@import "../sass/utilities/responsivo";
+
+//VARIAVEIS E MIXINS
+@import "../sass/variaves&mixins";
+
+// reset
+@import "../sass/utilities/reset";
+
+// animation
+@import "../sass/utilities/animation";
+
+
+//MENU
+@import "menu";
+
+
+
+body {
+  overflow-x: hidden;
+  @include font;
+  height: 3000px; //retirar DEPOIS ******
+}
+
+.menu {
+  .container {
+    @include d(ll) {
+      max-width: 90%;
+    }
+  }
+
+}
+
+.body__home {
+  @import "../sass/pages/page__home";
+}

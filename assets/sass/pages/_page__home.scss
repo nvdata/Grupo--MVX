@@ -1,0 +1,193 @@
+@import "../mouse";
+@import "../cursos";
+
+.cursos {
+    position: relative;
+
+    @import "../ornamentos";
+}
+
+.intro {
+    height: 100vh;
+    position: relative;
+    @include sombra;
+
+    @include d(m) {
+        height: 80vh;
+
+    }
+
+    video {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: 100px;
+        width: 100%;
+        height: calc(100vh - 100px);
+        z-index: -10;
+        background-size: cover;
+        filter: brightness(50%);
+        object-fit: cover;
+        object-position: center;
+
+        @include d(m) {
+            height: calc(80vh - 100px);
+
+        }
+
+    }
+
+    @include d(m) {
+        .mouse {
+            display: none;
+        }
+    }
+
+}
+
+
+.intro {
+
+    &__botoes {
+        position: absolute;
+
+        bottom: 120px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 150px;
+
+        @include d(m) {
+            bottom: 20px;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        a {
+            @include botao;
+            width: 250px;
+            text-align: center;
+            justify-content: center;
+            opacity: 0;
+        }
+
+        a:nth-child(2) {
+            @include botao(#a0cb39, white);
+
+
+        }
+    }
+}
+
+
+
+.who {
+    position: relative;
+
+
+
+    h1 {
+        @include tituloGrande;
+    }
+
+    p {
+        @include subtitulo;
+    }
+
+
+}
+
+#who {
+    position: relative;
+
+    .icon-bolinhas {
+        @include size(300px);
+        position: absolute;
+        left: 0;
+        top: -30px;
+
+        @include d(m) {
+            @include size(150px);
+
+        }
+    }
+}
+
+//seção MÃE
+
+
+.mae {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50vw;
+
+    @include d(m) {}
+
+    padding-bottom: 62vw;
+
+    &__img {
+        img {
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+
+    &__wrapper {
+        position: relative;
+        bottom: -400px;
+        margin-top: -400px;
+
+        max-width: 500px;
+    }
+}
+
+$terciaria:#340e41;
+
+.mae {
+    &__descricao {
+        margin-top: 40px;
+
+        @include d(m) {
+            margin-left: 30px;
+        }
+
+        h2 {
+            color: $terciaria;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 140%;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(112, 112, 112, 0.22);
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            max-width: 400px;
+
+            &:after {
+                content: "";
+                display: block;
+                @include bg-props-contain;
+                background-image: image("ornas/orna-6.svg");
+                height: 90px;
+                width: 20px;
+
+                left: -30px;
+                position: absolute;
+            }
+        }
+        p{
+            font-size: 14px;
+            line-height: 140%;
+            color: $terciaria;
+        }
+
+    }
+
+}
