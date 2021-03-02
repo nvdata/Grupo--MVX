@@ -22,9 +22,11 @@
     <main id="page__home">
 
         <section class="intro">
-            <div class="video__container">
-                <video id="video" loop="true" muted autoplay playsinline src="assets/img/video-reduced.mp4"
-                    preload="metadata"></video>
+            <div class="video__container">             
+                <video id="video" loop="true" muted autoplay playsinline preload="metadata" poster="assets/img/video-img.png">
+                    <source src="assets/img/video-reduced.mp4">
+
+                </video>
             </div>
 
             <a data-aos="fade-up" data-aos-delay="800" data-aos-duration="1200" class="mouse" href="#"><img
@@ -297,25 +299,26 @@
 
         <section id="mae">
             <div class="mae">
+                <img class="mae__orna" src="assets/img/ornas/orna-1.svg" alt="ornamento">
                 <div class="container">
 
                     <div class="mae__wrapper">
 
-                        <div class="mae__descricao">
+                        <div class="mae__descricao" data-aos="fade-right">
                             <h2>Suspendisse pellentesque aliquan enim</h2>
                             <p>O programa especialmente desenvolvido para elas chama-se Circle time e consiste em um
                                 trabalho em parceria com a mãe, pai, babá ou qualquer pessoa em casa com a criança (não
                                 precisa saber inglês). O objetivo é promover o estímulo sonoro da língua inglesa tendo a
                                 professora como facilitadora das atividades propostas.</p>
                         </div>
-                        <div class="mae__descricao">
+                        <div class="mae__descricao" data-aos="fade-right">
                             <h2>Suspendisse pellentesque aliquan enim</h2>
                             <p>O programa especialmente desenvolvido para elas chama-se Circle time e consiste em um
                                 trabalho em parceria com a mãe, pai, babá ou qualquer pessoa em casa com a criança (não
                                 precisa saber inglês). O objetivo é promover o estímulo sonoro da língua inglesa tendo a
                                 professora como facilitadora das atividades propostas.</p>
                         </div>
-                        <div class="mae__descricao">
+                        <div class="mae__descricao" data-aos="fade-right">
                             <h2>Suspendisse pellentesque aliquan enim</h2>
                             <p>O programa especialmente desenvolvido para elas chama-se Circle time e consiste em um
                                 trabalho em parceria com a mãe, pai, babá ou qualquer pessoa em casa com a criança (não
@@ -329,6 +332,37 @@
 
                 <div class="mae__img">
                     <img src="assets/img/mae.png" alt="mae">
+                </div>
+            </div>
+        </section>
+
+
+        <section id="novidades">
+            <div class="novidades">
+                <img class="novidades__orna" src="assets/img/ornas/orna-5.svg" alt="">
+                <div class="container" data-aos="fade-up" data-aos-duration="600">
+                    <h1 >Cadastre-se para receber novidades</h1>
+
+                    <form class="novidades__formulario novidades__wrapper" method="post">
+
+                        <div class="field">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" >
+                        </div>
+
+                        <div class="container__button">
+                            <button type="submit" name="acao" value="Enviar">Enviar<ion-icon
+                                    name="chevron-forward-outline"></ion-icon>
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </section>
@@ -377,8 +411,6 @@
         </div>
 
     </nav>
-
-
     <!-- MENU MOBILE ====================== -->
     <nav class="menu__mobile menu">
         <div class="container">
@@ -441,6 +473,9 @@
     <!-- swiper carousel -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
     <!-- aos -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"

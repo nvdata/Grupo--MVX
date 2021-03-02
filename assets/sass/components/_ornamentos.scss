@@ -1,6 +1,4 @@
 //ornamentos ==============
-
-
 .icon-orna-3 {
     @include size(10vw);
     position: absolute;
@@ -24,10 +22,8 @@
     left: -30px;
     width: 200px;
 
-    @include d(m) {
-
+    @include d(m) { //992px
         left: -60px;
-
     }
 
 }

@@ -11,7 +11,7 @@ $asset-base-path: '/assets' !default;
 /// @return {URL} - A `url()` function leading to the asset
 
 @function asset($type, $file) {
-  @return url($asset-base-path + '/' + $type + '/' + $file);
+  @return url($asset-base-path+'/'+$type+'/'+$file);
 }
 
 /// Image asset helper
@@ -21,7 +21,7 @@ $asset-base-path: '/assets' !default;
 /// @require {function} asset
 
 @function image($file) {
-  @return asset('img', $file);
+  @return asset('img',$file);
 }
 
 /// Font asset helper

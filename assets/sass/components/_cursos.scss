@@ -1,7 +1,5 @@
-// card
-$border-radius:20px;
-$borda:#e9e9e9;
 
+@import "../variaves__mixins"; //VARIAVEIS E MIXINS
 
 //seção
 #cursos {
@@ -51,6 +49,8 @@ $borda:#e9e9e9;
     @include d(s) {
         max-width: initial;
         width: 300px;
+        min-height: 510px;
+
 
     }
 
@@ -130,8 +130,6 @@ $borda:#e9e9e9;
             }
 
         }
-
-
 
     }
 

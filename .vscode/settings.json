@@ -29,6 +29,8 @@
 
     //nao mostra a barra || open output  ctrl+shift+u
     "liveSassCompile.settings.showOutputWindow": false,
+
+    //config pessoais
     "editor.lineHeight": 26,
     "workbench.editor.tabSizing": "fit",
 

@@ -1,10 +1,11 @@
-@import "../mouse";
-@import "../cursos";
+@import "../components/mouse"; //mouse
+@import "../components/cursos"; //carousel de cursos
+@import "../utilities/assets__helper"; //VARIAVEIS E MIXINS
+@import "../components/novidades"; //VARIAVEIS E MIXINS
 
 .cursos {
     position: relative;
-
-    @import "../ornamentos";
+    @import "../components/ornamentos";
 }
 
 .intro {
@@ -29,6 +30,7 @@
         filter: brightness(50%);
         object-fit: cover;
         object-position: center;
+        background-color: $secundaria;
 
         @include d(m) {
             height: calc(80vh - 100px);
@@ -88,8 +90,6 @@
 .who {
     position: relative;
 
-
-
     h1 {
         @include tituloGrande;
     }
@@ -97,8 +97,6 @@
     p {
         @include subtitulo;
     }
-
-
 }
 
 #who {
@@ -112,7 +110,6 @@
 
         @include d(m) {
             @include size(150px);
-
         }
     }
 }
@@ -123,11 +120,17 @@
 .mae {
     position: relative;
     width: 100%;
-    padding-bottom: 50vw;
-
-    @include d(m) {}
-
     padding-bottom: 62vw;
+
+    @include d(m) {
+        padding-bottom: 400px;
+
+    }
+
+    @include d(s) {
+        padding-bottom: 250px;
+
+    }
 
     &__img {
         img {
@@ -142,8 +145,23 @@
         position: relative;
         bottom: -400px;
         margin-top: -400px;
-
         max-width: 500px;
+
+        @include d(m) {
+            bottom: 0px;
+            margin-top: 0px;
+        }
+    }
+
+    &__orna {
+        position: absolute;
+        width: 11vw;
+        right: 0;
+        top: 450px;
+
+        @include d(s) {
+            display: none;
+        }
     }
 }
 
@@ -170,6 +188,10 @@ $terciaria:#340e41;
             align-items: center;
             max-width: 400px;
 
+            @include d(s) {
+                font-size: 22px;
+            }
+
             &:after {
                 content: "";
                 display: block;
@@ -177,17 +199,15 @@ $terciaria:#340e41;
                 background-image: image("ornas/orna-6.svg");
                 height: 90px;
                 width: 20px;
-
                 left: -30px;
                 position: absolute;
             }
         }
-        p{
+
+        p {
             font-size: 14px;
             line-height: 140%;
             color: $terciaria;
         }
-
     }
-
 }

@@ -81,6 +81,12 @@
     width: 100%;
     z-index: var(--menu-z-index);
     top: 0;
+
+    .container {
+        @include d(ll) {
+            max-width: 90%;
+        }
+    }
 }
 
 
