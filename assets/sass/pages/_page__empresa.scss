@@ -4,10 +4,10 @@
 
 .intro {
     position: relative;
-    background-image: image("empresa-intro.png");
+    background-image: url("../img/empresa-intro.png");
 
     @include d(s) {
-        background-image: image("empresa-intro-mobile.png");
+        background-image: url("../img/empresa-intro-mobile.png");
         background-position: left;
     }
 
