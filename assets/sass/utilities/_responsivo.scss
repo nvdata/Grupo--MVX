@@ -1,4 +1,5 @@
 //variaveis do grid
+$lll-device: 1921px; //large
 $ll-device: 1440px; //large
 $l-device: 1366px; //large
 $mm-device: 992px; //mediums
@@ -17,6 +18,11 @@ $ss-device: 330px; //small small
   }
   @else if $size==l {
     @media screen and (min-width: $l-device) {
+      //acima do medio
+      @content;
+    }
+  } @else if $size==lll {
+    @media screen and (min-width: $lll-device) {
       //acima do medio
       @content;
     }

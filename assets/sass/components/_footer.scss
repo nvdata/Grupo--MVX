@@ -1,0 +1,121 @@
+.footer {
+    padding: 40px 0;
+
+    a {
+        z-index: 3;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__descricao {
+        img {
+            max-width: 230px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 14px;
+            color: $cinza;
+            line-height: 150%;
+        }
+    }
+
+    &__links {
+        ul {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                margin-bottom: 20px;
+
+                a {
+                    color: $terciaria;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    &__atendimento {
+        h3 {
+            color: $terciaria;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        ul {
+            li {
+                margin-bottom: 20px;
+
+                a {
+                    display: inline-flex;
+                    align-items: center;
+                    color: $terciaria;
+                    font-size: 14px;
+
+                    img {
+                        @include size(24px);
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__login {
+        color: $terciaria;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__mulher {
+        pointer-events:none;
+
+        @include d(m) {
+            order: 10;
+
+        }
+
+        img {
+            width: 600px;
+            position: absolute;
+            top: -80px;
+            left: -120px;
+            max-width: initial;
+
+            @include d(m) {
+                max-width: 300px;
+                position: initial;
+                top: initial;
+                left: initial;
+                margin-top: 40px;
+                margin-bottom: -40px;
+            }
+        }
+    }
+
+    &__sociais {
+        display: flex;
+        gap: 15px;
+
+        @include d(m) {
+            margin: 20px 0;
+        }
+
+        a {
+            transition: .4s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

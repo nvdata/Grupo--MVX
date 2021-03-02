@@ -59,30 +59,28 @@ function verificacao() {
 
         });
 
-        
-        /* script para colocar a imagem em cima do video  enquanto carrega*/
-    /*     $(function () {
-            var videos = $("#video");
-            videos.on("click", function () {
-                var elm = $(this),
-                    conts = elm.contents(),
-                    le = conts.length,
-                    ifr = null;
+        //  script para mudar video da HOME mobile 
+        function trocaVideo() {
+            const videoHome = document.querySelector("#video source");
+            const quebra = window.matchMedia('(min-width: 992px)').matches;
 
-                for (var i = 0; i < le; i++) {
-                    if (conts[i].nodeType == 8) ifr = conts[i].textContent;
-                }
+            if (!quebra) {
+                videoHome.src = "assets/img/video-mobile.mp4";
+                console.log(videoHome.src);
+            }
+        }
 
-                elm.addClass("player").html(ifr);
-                elm.off("click");
-            });
-        });
- */
+        trocaVideo()
 
-
-
-
-
+        $('a[href^="#"]').on('click', function(e) {
+            e.preventDefault();
+             var id = $(this).attr('href'),
+              targetOffset = $(id).offset().top;
+   
+            $('html, body').animate({ 
+                 scrollTop: targetOffset - 80
+             }, 700);
+    });
     }
 }
 

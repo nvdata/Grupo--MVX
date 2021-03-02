@@ -122,6 +122,10 @@
     width: 100%;
     padding-bottom: 62vw;
 
+    @include d(lll) {
+        padding-bottom: clamp(1200px, 50vw, 2000px);
+    }
+
     @include d(m) {
         padding-bottom: 400px;
 
@@ -137,6 +141,7 @@
             position: absolute;
             bottom: 0;
             z-index: -1;
+            width: 100vw;
         }
     }
 
