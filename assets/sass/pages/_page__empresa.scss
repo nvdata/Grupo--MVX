@@ -42,5 +42,40 @@
 }
 
 .online {
-   @import "../components/subsecao";
+    @import "../components/subsecao";
+}
+
+#orcamento {
+    @import "../components/orcamentos";
+}
+
+.orcamento {
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+        @include d(s) {
+            margin-bottom: 30px !important;
+        }
+    }
+
+    &__orna-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8vw;
+    }
+
+    &__orna-2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 12vw;
+
+        @include d(m) {
+            width: 15vw;
+            top: 100px;
+
+        }
+    }
 }

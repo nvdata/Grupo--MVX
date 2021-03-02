@@ -1,0 +1,87 @@
+.orcamento {
+    padding: 120px 0;
+
+    @include d(m) {
+        padding: 80px 0;
+    }
+
+    h1 {
+        @include tituloGrande;
+        font-size: 42px;
+        margin-bottom: 80px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-flow: column wrap;
+        max-width: 550px;
+        margin: 0 auto;
+        justify-content: center;
+
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-bottom: 35px;
+
+            @include d(m) {
+                margin: 20px auto;
+            }
+
+            &__wrapper {
+                display: flex;
+                gap: 20px;
+
+                input {
+                    width: calc(275px - 10px) !important;
+                }
+
+                @include d(m) {
+                    flex-direction: column;
+                    gap: 0;
+
+                    input {
+                        width: 240px !important;
+                    }
+                }
+            }
+
+            input {
+                width: 100%;
+                border-radius: 30px;
+                padding: 10px 15px;
+                border: 0.05pt solid $borda;
+                position: relative;
+
+                @include d(m) {
+                    width: 240px;
+                }
+            }
+
+            label {
+                font-size: 14px;
+                position: absolute;
+                z-index: 2;
+                top: -15px;
+                left: 17px;
+                color: $terciaria;
+                background: white;
+                padding: 3px;
+            }
+
+
+        }
+    }
+
+    .container__button {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+
+        button {
+            @include botao($primaria, white);
+            margin: 0 auto;
+        }
+    }
+}
