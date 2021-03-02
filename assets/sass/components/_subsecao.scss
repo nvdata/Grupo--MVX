@@ -1,0 +1,49 @@
+h1 {
+    @include tituloGrande;
+}
+
+&__wrapper {
+    display: flex;
+    align-items: center;
+
+    @include d(m) {
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+}
+
+&__text {
+    margin-bottom: 20px;
+
+    p {
+        @include subtitulo(start);
+    }
+
+    h3 {
+        @include subtitulo(start);
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        @include d(m){
+            font-size: 20px;
+        }
+    }
+}
+
+&__img {
+    align-self: flex-end;
+    // @include sombra;
+
+    img {
+        width: 800px;
+        margin-left: -10vw;
+        max-width: initial;
+
+        @include d(m) {
+            width: 100%;
+            max-width: 100%;
+            margin: 10px auto;
+            margin-right: -10px;
+        }
+    }
+}

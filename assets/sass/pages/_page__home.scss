@@ -11,6 +11,7 @@
 .intro {
     height: 100vh;
     position: relative;
+    margin-top: 99px;
     @include sombra;
 
     @include d(m) {

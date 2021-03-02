@@ -1,0 +1,49 @@
+.intro {
+    margin-top: 99px;
+    height: calc(100vh - 99px);
+    overflow: hidden;
+    position: relative;
+    @include sombra;
+    @include bg-props-cover;
+
+    @include d(m) {
+        height: 80vh;
+    }
+
+    >.container {
+        height: 100%;
+    }
+
+    &__wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-size: clamp(42px, 7vw, 62px);
+            max-width: 600px;
+            line-height: 130%;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        p {
+            line-height: 150%;
+            color: white;
+            max-width: 600px;
+            font-size: 20px;
+
+            @include d(s) {
+                font-size: 14px;
+            }
+
+        }
+
+        a {
+            margin-top: 40px;
+            @include botao($primaria, white)
+        }
+    }
+
+}

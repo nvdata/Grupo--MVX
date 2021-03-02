@@ -1,9 +1,13 @@
 //verificação
 
 const pageHome = document.querySelector("#page__home")
+const pageEmpresa = document.querySelector("#page__empresa")
 
 function verificacao() {
+    //HOME ==========================================================
     if (pageHome) {
+        document.body.classList.add("body__home")
+
         var swiper = new Swiper('.cursos__container', {
             slidesPerView: 1,
             spaceBetween: 20,
@@ -32,7 +36,6 @@ function verificacao() {
                 },
             }
         });
-        AOS.init();
 
         // You can also pass an optional settings object
         // below listed default settings
@@ -56,7 +59,6 @@ function verificacao() {
             once: false, // whether animation should happen only once - while scrolling down
             mirror: false, // whether elements should animate out while scrolling past them
             anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
         });
 
         //  script para mudar video da HOME mobile 
@@ -69,18 +71,28 @@ function verificacao() {
                 console.log(videoHome.src);
             }
         }
-
         trocaVideo()
 
-        $('a[href^="#"]').on('click', function(e) {
+        // ANCORAS
+        $('a[href^="#"]').on('click', function (e) {
             e.preventDefault();
-             var id = $(this).attr('href'),
-              targetOffset = $(id).offset().top;
-   
-            $('html, body').animate({ 
-                 scrollTop: targetOffset - 80
-             }, 700);
-    });
+            var id = $(this).attr('href'),
+                targetOffset = $(id).offset().top;
+
+            $('html, body').animate({
+                scrollTop: targetOffset - 80
+            }, 700);
+        });
+
+        //PAGE EMPRESA =======================================================================
+    } else if (pageEmpresa) {
+        document.body.classList.add("body__empresa")
+        AOS.init({
+
+            offset: 80,
+            
+
+        });
     }
 }
 
@@ -104,7 +116,7 @@ function menuPreenchido() {
         if (window.pageYOffset >= 120) {
             document.body.classList.add("ativo__scroll");
 
-        } else if (window.pageYOffset < 150) {
+        } else if (window.pageYOffset < 200) {
             document.body.classList.remove("ativo__scroll");
         }
     });
@@ -161,21 +173,21 @@ dropMobile.addEventListener("click", function (event) {
 
 
 
-//ANIMAÇÕES
-const buttons = document.querySelectorAll('a');
-buttons.forEach(function (button) {
-    button.addEventListener('click', function (event) {
-        let x = event.clientX - event.target.offsetLeft;
-        let y = event.clientY - event.target.offsetTop;
-        let rippleElement = document.createElement('span');
-        rippleElement.style.left = x + 'px';
-        rippleElement.style.top = y + 'px';
-        this.appendChild(rippleElement);
-        setTimeout(function () {
-            rippleElement.remove();
-        }, 500);
-    });
-});
+//botao teste
+// const buttons = document.querySelectorAll('a');
+// buttons.forEach(function (button) {
+//     button.addEventListener('click', function (event) {
+//         let x = event.clientX - event.target.offsetLeft;
+//         let y = event.clientY - event.target.offsetTop;
+//         let rippleElement = document.createElement('span');
+//         rippleElement.style.left = x + 'px';
+//         rippleElement.style.top = y + 'px';
+//         this.appendChild(rippleElement);
+//         setTimeout(function () {
+//             rippleElement.remove();
+//         }, 500);
+//     });
+// });
 
 //eventos =======================================
 menuItem.addEventListener("click", menuMobile)

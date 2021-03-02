@@ -1,0 +1,46 @@
+@import "../utilities/assets__helper";
+@import "../variaves__mixins";
+@import "../components/intros";
+
+.intro {
+    position: relative;
+    background-image: image("empresa-intro.png");
+
+    @include d(s) {
+        background-image: image("empresa-intro-mobile.png");
+        background-position: left;
+    }
+
+
+}
+
+// seção online
+// ornamentos
+.online {
+    position: relative;
+
+    &__orna-1 {
+        position: absolute;
+        top: -100px;
+        z-index: 2;
+        width: 200px;
+    }
+
+    &__orna-2 {
+        position: absolute;
+        top: -100px;
+        z-index: 2;
+        width: 170px;
+        right: 0px;
+
+        @include d(m) {
+            width: 70px;
+            top: -20px;
+
+        }
+    }
+}
+
+.online {
+   @import "../components/subsecao";
+}
