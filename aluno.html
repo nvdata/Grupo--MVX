@@ -12,7 +12,7 @@
         integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
         crossorigin="anonymous" />
 
-    <title>Urban Camp - EMPRESA</title>
+    <title>Urban Camp - Aluno</title>
 </head>
 
 <body>
@@ -42,11 +42,17 @@
 
                 <img src="assets/img/ornas/orna-5.svg" alt="ornamento" class="online__orna-2">
 
+                <img src="assets/img/ornas/orna-1.svg" alt="ornamento" class="online__orna-1">
+
                 <div class="container">
                     <h1 data-aos="fade-up" data-aos-duration="600">Online</h1>
                     <div class="online__wrapper">
                         <div class="col-lg-6 online__img">
-                            <img src="assets/img/mulher-online.png" alt="mulher">
+                            <svg class="icon-orna-4">
+                                <use xlink:href="assets/img/ornas/symbol-defs.svg#icon-orna-4"></use>
+                            </svg>
+                            <img src="assets/img/ornas/orna-8.svg" alt="ornamento" class="online__orna-3">
+                            <img src="assets/img/online-2.png" alt="mulher">
                         </div>
                         <div class="col-lg-6">
                             <div class="online__text">
@@ -95,20 +101,14 @@
 
         <section id="cursos">
             <div class="cursos">
-                <!-- orna listras -->
-                <svg class="icon-orna-3">
-                    <use xlink:href="assets/img/ornas/symbol-defs.svg#icon-orna-3"></use>
-                </svg>
-                <!-- orna linhas -->~
-                <svg class="icon-orna-1">
-                    <use xlink:href="assets/img/ornas/symbol-defs.svg#icon-orna-1"></use>
-                </svg>
+
+
                 <div class="container">
 
-                    <div class="cursos__container">
+                    <div class="cursos__container swiper-container">
+                        <h1>Cursos em Destaque</h1>
 
                         <div class="swiper-wrapper cursos__wrapper">
-
 
                             <ul class="swiper-slide cursos__slide curso " data-aos="fade-right" data-aos-duration="800">
 
@@ -319,12 +319,219 @@
                         <ion-icon name="chevron-forward-outline"></ion-icon>
                     </div>
                 </div>
-                <svg class="icon-orna-4">
-                    <use xlink:href="assets/img/ornas/symbol-defs.svg#icon-orna-4"></use>
-                </svg>
+
             </div>
 
         </section>
+
+        <!-- cursos 2222222222222222222222222222222222222222222222222 -->
+
+        <section id="cursos-2">
+            <div class="cursos cursos-2">
+
+                <div class="container">
+
+                    <div class="cursos__container swiper-container-2">
+                        <h1>Cursos para você</h1>
+                        <nav class="cursos__busca">
+                            <div class="input__wrapper">
+                                <ion-icon name="search-outline"></ion-icon>
+                                <input type="text" placeholder="Pesquise seu curso aqui">
+                                <button>Buscar</button>
+                            </div>
+                            <div class="cursos__categoria">
+                                <select name="categoria" id="categoria">
+                                    <option value="opcao-1">opção 1</option>
+                                    <option value="opcao-2">opção 2</option>
+                                    <option value="opaco-3">opção 3</option>
+
+                                </select>
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </div>
+
+
+                        </nav>
+                        <div class="cursos__wrapper swiper-wrapper">
+
+                            <ul class=" cursos__slide swiper-slide col-lg-4 px-0 col-md-6 curso ">
+
+                                <li class="img__container"><img src="assets/img/curso-2.png" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul><!-- curso 1 -->
+                            <ul class=" cursos__slide swiper-slide col-lg-4 px-0 col-md-6 curso">
+
+                                <li class="img__container"><img src="assets/img/curso-2.png" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+                            <ul class=" cursos__slide swiper-slide col-lg-4 px-0 col-md-6 curso">
+
+                                <li class="img__container"><img src="assets/img/curso-2.png" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+                            <ul class="cursos__slide swiper-slide col-lg-4 px-0 col-md-6 curso">
+
+                                <li class="img__container"><img src="assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+                            <ul class=" cursos__slide swiper-slide col-lg-4 px-0 col-md-6 curso">
+
+                                <li class="img__container"><img src="assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+
+                            <ul class=" cursos__slide swiper-slide col-lg-4 px-0 col-md-6 curso">
+
+                                <li class="img__container"><img src="assets/img/curso-1.jpg" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+
+                            <ul class=" cursos__slide swiper-slide col-lg-4 px-0 col-md-6 curso">
+
+                                <li class="img__container"><img src="assets/img/curso-3.png" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+
+                            <ul class=" cursos__slide swiper-slide col-lg-4 px-0 col-md-6 curso">
+
+                                <li class="img__container"><img src="assets/img/curso-3.png" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+
+                            <ul class=" cursos__slide swiper-slide col-lg-4 px-0 col-md-6 curso">
+
+                                <li class="img__container"><img src="assets/img/curso-3.png" alt="curso"></li>
+                                <li class="curso__header">
+                                    <span>remoto</span>
+                                    <h2>Phasellus eu nisl justo</h2>
+                                    <h3><span>R$</span> 189,90</h3>
+                                </li>
+                                <li class="curso__texto">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens
+                                    utebare non numquam. Sed erat aequius Triarium aliquid de dissensione nostra
+                                    iudicare. Aut, Pylades cum sis.
+                                </li>
+                                <li class="curso__call">
+                                    <a href="#">Comprar</a>
+                                </li>
+                            </ul>
+
+
+
+
+                        </div> <!-- wrapper -->
+
+                        <div class="swiper-button-prev">
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                            </ion-icon>
+                        </div>
+                        <div class="swiper-button-next">
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
 
 
 

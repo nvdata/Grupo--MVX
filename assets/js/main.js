@@ -97,8 +97,71 @@ function verificacao() {
     } else if (pageAluno) {
         document.body.classList.add("body__aluno")
         AOS.init({
-            offset: 80,
+            offset: 30,
         });
+
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                380: {
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                },
+
+                720: {
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    // freeMode: true,
+                },
+                1100: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                    centeredSlides: false,
+
+                },
+            }
+        });
+        const mobile = window.matchMedia('(min-width: 540px)').matches
+        console.log(mobile);
+        if (!mobile) {
+            var swiper = new Swiper('.swiper-container-2', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    380: {
+                        slidesPerView: "auto",
+                        centeredSlides: true,
+                        spaceBetween: 30,
+                    },
+
+                    720: {
+                        slidesPerView: "auto",
+                        centeredSlides: true,
+                        spaceBetween: 30,
+                        // freeMode: true,
+                    },
+                    1100: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                        centeredSlides: false,
+
+                    },
+                }
+            });
+
+        }
+
     }
 }
 
