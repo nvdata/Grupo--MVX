@@ -17,13 +17,24 @@
 body {
   overflow-x: hidden;
   @include font;
-  @include scrollbars(5px, $primaria, rgb(238, 238, 238))
+  @include scrollbars(5px, $primaria, rgb(238, 238, 238));
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+body.dcl {
+  opacity: 1;
 }
 
 
 .body__home {
   @import "../sass/pages/page__home";
 }
-.body__empresa{
+
+.body__empresa {
   @import "../sass/pages/page__empresa";
+}
+
+.body__aluno {
+  @import "../sass/pages/page__aluno";
 }

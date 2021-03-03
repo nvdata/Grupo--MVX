@@ -5,7 +5,7 @@
     position: relative;
     @include sombra;
     @include bg-props-cover;
-    background-color: $secundaria;
+    background-color: $fundo-claro;
 
     @include d(m) {
         height: 80vh;

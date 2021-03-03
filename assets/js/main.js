@@ -2,6 +2,7 @@
 
 const pageHome = document.querySelector("#page__home")
 const pageEmpresa = document.querySelector("#page__empresa")
+const pageAluno = document.querySelector("#page__aluno")
 
 function verificacao() {
     //HOME ==========================================================
@@ -87,11 +88,16 @@ function verificacao() {
         //PAGE EMPRESA =======================================================================
     } else if (pageEmpresa) {
         document.body.classList.add("body__empresa")
+
         AOS.init({
-
             offset: 80,
-            
+        });
 
+        //PAGE ALUNOS =======================================================================
+    } else if (pageAluno) {
+        document.body.classList.add("body__aluno")
+        AOS.init({
+            offset: 80,
         });
     }
 }
@@ -193,3 +199,8 @@ dropMobile.addEventListener("click", function (event) {
 menuItem.addEventListener("click", menuMobile)
 document.body.addEventListener("click", fechaMenuMobile)
 window.addEventListener("scroll", menuPreenchido);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.body.classList.add("dcl")
+});
