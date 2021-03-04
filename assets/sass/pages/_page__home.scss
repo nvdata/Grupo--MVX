@@ -11,7 +11,7 @@
 .intro {
     height: 100vh;
     position: relative;
-    margin-top: 99px;
+    // margin-top: 99px;
     @include sombra;
 
     @include d(m) {
@@ -76,6 +76,10 @@
             text-align: center;
             justify-content: center;
             opacity: 0;
+            position: relative;
+
+    
+
         }
 
         a:nth-child(2) {

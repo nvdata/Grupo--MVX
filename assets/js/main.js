@@ -3,6 +3,8 @@
 const pageHome = document.querySelector("#page__home")
 const pageEmpresa = document.querySelector("#page__empresa")
 const pageAluno = document.querySelector("#page__aluno")
+const pageInstituicoes = document.querySelector("#page__instituicoes")
+const pageMateriais = document.querySelector("#page__materiais")
 
 function verificacao() {
     //HOME ==========================================================
@@ -75,15 +77,15 @@ function verificacao() {
         trocaVideo()
 
         // ANCORAS
-        $('a[href^="#"]').on('click', function (e) {
-            e.preventDefault();
-            var id = $(this).attr('href'),
-                targetOffset = $(id).offset().top;
+        // $('a[href^="#"]').on('click', function (e) {
+        //     e.preventDefault();
+        //     var id = $(this).attr('href'),
+        //         targetOffset = $(id).offset().top;
 
-            $('html, body').animate({
-                scrollTop: targetOffset - 80
-            }, 700);
-        });
+        //     $('html, body').animate({
+        //         scrollTop: targetOffset - 80
+        //     }, 700);
+        // });
 
         //PAGE EMPRESA =======================================================================
     } else if (pageEmpresa) {
@@ -128,8 +130,10 @@ function verificacao() {
                 },
             }
         });
+
+        //slide 2 ===
         const mobile = window.matchMedia('(min-width: 540px)').matches
-        console.log(mobile);
+        // console.log(mobile);
         if (!mobile) {
             var swiper = new Swiper('.swiper-container-2', {
                 slidesPerView: 1,
@@ -161,6 +165,79 @@ function verificacao() {
             });
 
         }
+
+        // page  instituicoes ==================================
+    } else if (pageInstituicoes) {
+        document.body.classList.add("body__instituicoes")
+        // 
+        AOS.init({
+            offset: 30,
+        });
+        // page materiais ============================================
+    } else if (pageMateriais) {
+        document.body.classList.add("body__materiais")
+        const categorias = document.querySelector(".cursos__categoria")
+        // 
+        AOS.init({
+            offset: 30,
+        });
+
+        //slide 2 ===
+        const mobile = window.matchMedia('(min-width: 540px)').matches
+        // console.log(mobile);
+        if (!mobile) {
+            var swiper = new Swiper('.swiper-container-2', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    380: {
+                        slidesPerView: "auto",
+                        centeredSlides: true,
+                        spaceBetween: 30,
+                    },
+
+                    720: {
+                        slidesPerView: "auto",
+                        centeredSlides: true,
+                        spaceBetween: 30,
+                        // freeMode: true,
+                    },
+                    1100: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                        centeredSlides: false,
+
+                    },
+                }
+            });
+
+        }
+        var swiper = new Swiper(categorias, {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            loop: false,
+            breakpoints: {
+                560: {
+                    slidesPerView: "auto",
+                    spaceBetween: 20,
+                    loop: false,
+
+                },
+
+            }
+
+        });
+        const categoriasItem = document.querySelectorAll(".cursos__categoria li")
+        categoriasItem.forEach((i) => {
+            i.addEventListener("click", function () {
+                i.classList.toggle("active")
+            })
+        })
+
 
     }
 }
@@ -243,20 +320,23 @@ dropMobile.addEventListener("click", function (event) {
 
 
 //botao teste
-// const buttons = document.querySelectorAll('a');
-// buttons.forEach(function (button) {
-//     button.addEventListener('click', function (event) {
-//         let x = event.clientX - event.target.offsetLeft;
-//         let y = event.clientY - event.target.offsetTop;
-//         let rippleElement = document.createElement('span');
-//         rippleElement.style.left = x + 'px';
-//         rippleElement.style.top = y + 'px';
-//         this.appendChild(rippleElement);
-//         setTimeout(function () {
-//             rippleElement.remove();
-//         }, 500);
-//     });
-// });
+const buttonss = document.querySelectorAll('a');
+buttonss.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+        let x = event.clientX - event.target.getBoundingClientRect().x;
+        let y = event.clientY - event.target.getBoundingClientRect().y;
+        console.log(event.clientX, event.target.offsetLeft);
+
+        let rippleElement = document.createElement('span');
+        rippleElement.style.left = x + 'px';
+        rippleElement.style.top = "-" + y + 'px';
+
+        this.appendChild(rippleElement);
+        setTimeout(function () {
+            // rippleElement.remove();
+        }, 5500);
+    });
+});
 
 //eventos =======================================
 menuItem.addEventListener("click", menuMobile)

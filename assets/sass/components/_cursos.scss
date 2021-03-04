@@ -1,4 +1,3 @@
-
 @import "../variaves__mixins"; //VARIAVEIS E MIXINS
 
 //seção
@@ -203,5 +202,13 @@
             font-size: 18px;
         }
 
+    }
+}
+
+.curso {
+    &__header {
+        .presencial {
+            background: #ff5d94 !important;
+        }
     }
 }

@@ -71,6 +71,7 @@
             @include botao($primaria, white);
             margin-left: 15px;
             padding: 12px 40px;
+            align-items: center;
             ion-icon {
                 font-size: 14px;
             }

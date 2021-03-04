@@ -16,16 +16,20 @@
 
 body {
   overflow-x: hidden;
-  @include font;
   @include scrollbars(5px, $primaria, rgb(238, 238, 238));
   transition: opacity 0.3s ease;
   opacity: 0;
 }
 
+body,
+button,
+select {
+  @include font;
+}
+
 body.dcl {
   opacity: 1;
 }
-
 
 .body__home {
   @import "../sass/pages/page__home";
@@ -37,4 +41,12 @@ body.dcl {
 
 .body__aluno {
   @import "../sass/pages/page__aluno";
+}
+
+.body__instituicoes {
+  @import "../sass/pages/page__instituicoes";
+}
+
+.body__materiais {
+  @import "../sass/pages/page__materiais";
 }
