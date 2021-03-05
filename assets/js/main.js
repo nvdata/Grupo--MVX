@@ -5,6 +5,7 @@ const pageEmpresa = document.querySelector("#page__empresa")
 const pageAluno = document.querySelector("#page__aluno")
 const pageInstituicoes = document.querySelector("#page__instituicoes")
 const pageMateriais = document.querySelector("#page__materiais")
+const pageProduto = document.querySelector("#page__produto")
 
 function verificacao() {
     //HOME ==========================================================
@@ -68,7 +69,6 @@ function verificacao() {
         function trocaVideo() {
             const videoHome = document.querySelector("#video source");
             const quebra = window.matchMedia('(min-width: 992px)').matches;
-
             if (!quebra) {
                 videoHome.src = "assets/img/video-mobile.mp4";
                 console.log(videoHome.src);
@@ -239,6 +239,13 @@ function verificacao() {
         })
 
 
+    } else if (pageProduto) {
+        document.body.classList.add("body__materiais")
+        // const categorias = document.querySelector(".cursos__categoria")
+        // 
+        AOS.init({
+            offset: 30,
+        });
     }
 }
 
@@ -323,9 +330,10 @@ dropMobile.addEventListener("click", function (event) {
 const buttonss = document.querySelectorAll('a');
 buttonss.forEach(function (button) {
     button.addEventListener('click', function (event) {
+        // event.preventDefault()
         let x = event.clientX - event.target.getBoundingClientRect().x;
         let y = event.clientY - event.target.getBoundingClientRect().y;
-        console.log(event.clientX, event.target.offsetLeft);
+        console.log(event.clientY, event.target.offsetLeft, y);
 
         let rippleElement = document.createElement('span');
         rippleElement.style.left = x + 'px';
@@ -333,8 +341,8 @@ buttonss.forEach(function (button) {
 
         this.appendChild(rippleElement);
         setTimeout(function () {
-            // rippleElement.remove();
-        }, 5500);
+            rippleElement.remove();
+        }, 600);
     });
 });
 

@@ -57,7 +57,7 @@ $borda:#e9e9e9;
         background: $secundaria;
         position: absolute;
         transform-origin: center center;
-        @include size(400px);
+        @include size(100px);
         border-radius: 50%;
         animation: animate 1s linear forwards;
         pointer-events: none;
