@@ -154,13 +154,22 @@
             font-family: $gilroy;
             font-weight: 500;
             font-size: clamp(40px, 5vw, 80px);
-            position: relative;
 
-            &:after {
-                content: "";
-                @include bg-props-contain;
-                background-image: url(../img/logo-menor.svg);
+            p {
+                display: inline-flex;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    @include bg-props-contain;
+                    background-image: url(../img/logo-menor.svg);
+                    position: absolute;
+                    display: block;
+                    @include size(200px)
+                }
             }
+
+
 
             span {
                 font-size: 120%;

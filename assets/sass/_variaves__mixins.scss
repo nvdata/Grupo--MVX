@@ -9,7 +9,7 @@
 // PROJETO ===================================================
 //font
 @mixin font($peso:400) {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $inter;
     font-weight: $peso;
 }
 

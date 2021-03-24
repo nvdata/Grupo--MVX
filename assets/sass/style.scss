@@ -14,7 +14,7 @@
 
 body {
   overflow-x: hidden;
-  // @include scrollbars(5px, $primaria, rgb(238, 238, 238));
+  @include scrollbars(8px, $cor-1, rgb(238, 238, 238));
   transition: opacity 0.3s ease;
   opacity: 1;
   height: 4000px; //RETIRARRRRRR
