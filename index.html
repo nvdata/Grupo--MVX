@@ -172,9 +172,21 @@
         crossorigin="anonymous"></script> -->
 
     <!-- JS FRONT -->
+    <script src="node_modules/browser-detect/dist/browser-detect.umd.js"></script>
+
     <script type="module" src="assets/js/main.js"></script>
 
+    <script>
+        const result = browserDetect();
+        console.log(result);
 
+        function safariCheck() {
+            if (result.name === "safari") {
+                document.body.classList.add("safari")
+            }
+        }
+        safariCheck()
+    </script>
 
 
 </body>

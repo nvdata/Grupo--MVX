@@ -3,6 +3,8 @@
 
 import Dom from './modules/constructors.js'; //selecionar elementos e gerenciar classes
 import menu from './modules/menu.js'; //js do menu
+// import result from "./modules/detect-browser.js";
+
 
 menu(); //executa function do menu
 
