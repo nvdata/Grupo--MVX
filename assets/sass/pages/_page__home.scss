@@ -1,223 +1,171 @@
-@import "../components/mouse"; //mouse
-@import "../components/cursos"; //carousel de cursos
-@import "../utilities/assets__helper"; //VARIAVEIS E MIXINS
-@import "../components/novidades"; //VARIAVEIS E MIXINS
+#page__home {
 
-.cursos {
-    position: relative;
-    @import "../components/ornamentos";
+    overflow: hidden;
+
+
+}
+
+.menu {
+    background: transparent;
+}
+
+&.ativo__scroll {
+    .menu {
+        background: white;
+    }
 }
 
 .intro {
     height: 100vh;
-    position: relative;
-    // margin-top: 99px;
-    @include sombra;
-
-    @include d(m) {
-        height: 80vh;
-
-    }
-
-    video {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        top: 100px;
-        width: 100%;
-        height: calc(100vh - 100px);
-        z-index: -10;
-        background-size: cover;
-        filter: brightness(50%);
-        object-fit: cover;
-        object-position: center;
-        background-color: $secundaria;
-
-        @include d(m) {
-            height: calc(80vh - 100px);
-
-        }
-
-    }
-
-    @include d(m) {
-        .mouse {
-            display: none;
-        }
-    }
-
-}
-
-
-.intro {
-
-    &__botoes {
-        position: absolute;
-
-        bottom: 120px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 150px;
-
-        @include d(m) {
-            bottom: 20px;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        a {
-            @include botao;
-            width: 250px;
-            text-align: center;
-            justify-content: center;
-            opacity: 0;
-            position: relative;
-
-    
-
-        }
-
-        a:nth-child(2) {
-            @include botao(#a0cb39, white);
-
-
-        }
-    }
-}
-
-
-
-.who {
+    min-height: 600px;
     position: relative;
 
-    h1 {
-        @include tituloGrande;
+    >.container {
+        height: 100%;
     }
-
-    p {
-        @include subtitulo;
-    }
-}
-
-#who {
-    position: relative;
-
-    .icon-bolinhas {
-        @include size(300px);
-        position: absolute;
-        left: 0;
-        top: -30px;
-
-        @include d(m) {
-            @include size(150px);
-        }
-    }
-}
-
-//seção MÃE
-
-
-.mae {
-    position: relative;
-    width: 100%;
-    padding-bottom: 62vw;
-
-    @include d(lll) {
-        padding-bottom: clamp(1200px, 50vw, 2000px);
-    }
-
-    @include d(m) {
-        padding-bottom: 400px;
-
-    }
-
-    @include d(s) {
-        padding-bottom: 250px;
-
-    }
-
-    &__img {
-        img {
-            position: absolute;
-            bottom: 0;
-            z-index: -1;
-            width: 100vw;
-        }
-    }
-
 
     &__wrapper {
-        position: relative;
-        bottom: -400px;
-        margin-top: -400px;
-        max-width: 500px;
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100%;
+        margin-top: 140px;
 
         @include d(m) {
-            bottom: 0px;
-            margin-top: 0px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin-top: 50px;
+        color: $cor-2;
+        font-family: $inter;
+
+        h2 {
+            font-size: clamp(16px, 2vw, 34px);
+            font-family: $gilroy;
+            margin-left: 5px;
+
+            @include d(s) {
+                // margin-bottom: 10px;
+                margin-left: 0px;
+            }
+        }
+
+        h1 {
+            font-size: clamp(32px, 6vw, 100px);
+            font-weight: 900;
+            line-height: 130%;
+
+            @include d(s) {
+                line-height: 180%;
+            }
+
+            span {
+                font-size: 200%;
+            }
+        }
+    }
+
+    .ornamentos {
+        position: absolute;
+        width: 45vw;
+        // height: 560px;
+        height: 30vw;
+        transition: all .5s ease;
+
+        @include d(m) {
+            width: 60vw;
+
+        }
+
+        @include d(s) {
+            width: 80vw;
+            height: 560px;
         }
     }
 
     &__orna {
-        position: absolute;
-        width: 11vw;
-        right: 0;
-        top: 450px;
+        position: relative;
 
-        @include d(s) {
-            display: none;
+        .orna__1 {
+            left: -250px;
+            z-index: -3;
+            top: 50px;
+
+            @include d(s) {
+                top: initial;
+                left: -250px;
+                top: 30px;
+            }
+
         }
+
+        .orna__2 {
+            left: -200px;
+            z-index: -2;
+
+            @include d(s) {
+                top: initial;
+                left: -220px;
+                top: 0px;
+
+            }
+
+        }
+    }
+
+
+}
+
+@media (max-width: 1441px) and (min-width:540px) {
+    .intro__text {
+        margin-left: 5vw;
     }
 }
 
-$terciaria:#340e41;
+.quemsomos {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    padding: 60px 0;
 
-.mae {
-    &__descricao {
-        margin-top: 40px;
+    &:after {
+        content: "";
+        display: block;
+        @include bg-props-contain;
+        background-image: url(../img/fundo-logo.svg);
 
-        @include d(m) {
-            margin-left: 30px;
-        }
+        position: absolute;
+        right: -220px;
+        width: 550px;
+        height: 600px;
+        top: -70px;
+    }
 
-        h2 {
-            color: $terciaria;
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 140%;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid rgba(112, 112, 112, 0.22);
+    &__wrapper {
+        display: flex;
+    }
+
+    &__item-1 {
+        h1 {
+            font-family: $gilroy;
+            font-weight: 500;
+            font-size: clamp(40px, 5vw, 80px);
             position: relative;
-            display: inline-flex;
-            align-items: center;
-            max-width: 400px;
-
-            @include d(s) {
-                font-size: 22px;
-            }
 
             &:after {
                 content: "";
-                display: block;
                 @include bg-props-contain;
-                background-image: image("ornas/orna-6.svg");
-                height: 90px;
-                width: 20px;
-                left: -30px;
-                position: absolute;
+                background-image: url(../img/logo-menor.svg);
+            }
+
+            span {
+                font-size: 120%;
             }
         }
-
-        p {
-            font-size: 14px;
-            line-height: 140%;
-            color: $terciaria;
-        }
     }
+
 }

@@ -30,10 +30,16 @@
     //nao mostra a barra || open output  ctrl+shift+u
     "liveSassCompile.settings.showOutputWindow": false,
 
-    //config pessoais
+    //config pessoais ===
+
     "editor.lineHeight": 26,
     "workbench.editor.tabSizing": "fit",
-
+    "workbench.colorCustomizations": {
+        "editorIndentGuide.activeBackground": "#ce7a79"
+    },
+    "editor.wordWrap": "on",
+    "scss.showErrors": true,
+    "html-css-class-completion.enableScssFindUsage": true,
 }
 
 

@@ -1,0 +1,30 @@
+// COLORS
+$cor-1:#7055FA;
+$cor-2:#090417;
+// END COLORS
+
+
+
+
+
+//FONTES
+
+
+@font-face {
+    font-family: Gilroy;
+    src: url(../fonts/Gilroy-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(../fonts/Gilroy-ExtraBold.otf);
+    font-weight: 900;
+}
+
+
+$inter: 'Inter',
+sans-serif;
+
+$gilroy: "Gilroy",
+sans-serif;

@@ -1,357 +1,52 @@
-//verificação
+// import animacaoHome from './modules/animation.js'; //animacao full scroll da home
+// import * as config from './modules/swiper__props.js'; //Configs do Swiper
 
-const pageHome = document.querySelector("#page__home")
-const pageEmpresa = document.querySelector("#page__empresa")
-const pageAluno = document.querySelector("#page__aluno")
-const pageInstituicoes = document.querySelector("#page__instituicoes")
-const pageMateriais = document.querySelector("#page__materiais")
-const pageProduto = document.querySelector("#page__produto")
+import Dom from './modules/constructors.js'; //selecionar elementos e gerenciar classes
+import menu from './modules/menu.js'; //js do menu
 
-function verificacao() {
-    //HOME ==========================================================
-    if (pageHome) {
-        document.body.classList.add("body__home")
-
-        var swiper = new Swiper('.cursos__container', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                380: {
-                    slidesPerView: "auto",
-                    centeredSlides: true,
-                    spaceBetween: 30,
-                },
-
-                720: {
-                    slidesPerView: "auto",
-                    centeredSlides: true,
-                    spaceBetween: 30,
-                    // freeMode: true,
-                },
-                1100: {
-                    slidesPerView: 3,
-                    spaceBetween: 50,
-                    centeredSlides: false,
-
-                },
-            }
-        });
-
-        // You can also pass an optional settings object
-        // below listed default settings
-        AOS.init({
-            // Global settings:
-            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-            initClassName: 'aos-init', // class applied after initialization
-            animatedClassName: 'aos-animate', // class applied on animation
-            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+menu(); //executa function do menu
 
 
-            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-            offset: 80, // offset (in px) from the original trigger point
-            delay: 0, // values from 0 to 3000, with step 50ms
-            duration: 400, // values from 0 to 3000, with step 50ms
-            easing: 'ease', // default easing for AOS animations
-            once: false, // whether animation should happen only once - while scrolling down
-            mirror: false, // whether elements should animate out while scrolling past them
-            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-        });
-
-        //  script para mudar video da HOME mobile 
-        function trocaVideo() {
-            const videoHome = document.querySelector("#video source");
-            const quebra = window.matchMedia('(min-width: 992px)').matches;
-            if (!quebra) {
-                videoHome.src = "assets/img/video-mobile.mp4";
-                console.log(videoHome.src);
-            }
-        }
-        trocaVideo()
-
-        // ANCORAS
-        // $('a[href^="#"]').on('click', function (e) {
-        //     e.preventDefault();
-        //     var id = $(this).attr('href'),
-        //         targetOffset = $(id).offset().top;
-
-        //     $('html, body').animate({
-        //         scrollTop: targetOffset - 80
-        //     }, 700);
-        // });
-
-        //PAGE EMPRESA =======================================================================
-    } else if (pageEmpresa) {
-        document.body.classList.add("body__empresa")
-
-        AOS.init({
-            offset: 80,
-        });
-
-        //PAGE ALUNOS =======================================================================
-    } else if (pageAluno) {
-        document.body.classList.add("body__aluno")
-        AOS.init({
-            offset: 30,
-        });
-
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                380: {
-                    slidesPerView: "auto",
-                    centeredSlides: true,
-                    spaceBetween: 30,
-                },
-
-                720: {
-                    slidesPerView: "auto",
-                    centeredSlides: true,
-                    spaceBetween: 30,
-                    // freeMode: true,
-                },
-                1100: {
-                    slidesPerView: 3,
-                    spaceBetween: 50,
-                    centeredSlides: false,
-
-                },
-            }
-        });
-
-        //slide 2 ===
-        const mobile = window.matchMedia('(min-width: 540px)').matches
-        // console.log(mobile);
-        if (!mobile) {
-            var swiper = new Swiper('.swiper-container-2', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    380: {
-                        slidesPerView: "auto",
-                        centeredSlides: true,
-                        spaceBetween: 30,
-                    },
-
-                    720: {
-                        slidesPerView: "auto",
-                        centeredSlides: true,
-                        spaceBetween: 30,
-                        // freeMode: true,
-                    },
-                    1100: {
-                        slidesPerView: 3,
-                        spaceBetween: 50,
-                        centeredSlides: false,
-
-                    },
-                }
-            });
-
-        }
-
-        // page  instituicoes ==================================
-    } else if (pageInstituicoes) {
-        document.body.classList.add("body__instituicoes")
-        // 
-        AOS.init({
-            offset: 30,
-        });
-        // page materiais ============================================
-    } else if (pageMateriais) {
-        document.body.classList.add("body__materiais")
-        const categorias = document.querySelector(".cursos__categoria")
-        // 
-        AOS.init({
-            offset: 30,
-        });
-
-        //slide 2 ===
-        const mobile = window.matchMedia('(min-width: 540px)').matches
-        // console.log(mobile);
-        if (!mobile) {
-            var swiper = new Swiper('.swiper-container-2', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    380: {
-                        slidesPerView: "auto",
-                        centeredSlides: true,
-                        spaceBetween: 30,
-                    },
-
-                    720: {
-                        slidesPerView: "auto",
-                        centeredSlides: true,
-                        spaceBetween: 30,
-                        // freeMode: true,
-                    },
-                    1100: {
-                        slidesPerView: 3,
-                        spaceBetween: 50,
-                        centeredSlides: false,
-
-                    },
-                }
-            });
-
-        }
-        var swiper = new Swiper(categorias, {
-            slidesPerView: 2,
-            spaceBetween: 10,
-            loop: false,
-            breakpoints: {
-                560: {
-                    slidesPerView: "auto",
-                    spaceBetween: 20,
-                    loop: false,
-
-                },
-
-            }
-
-        });
-        const categoriasItem = document.querySelectorAll(".cursos__categoria li")
-        categoriasItem.forEach((i) => {
-            i.addEventListener("click", function () {
-                i.classList.toggle("active")
-            })
-        })
+// PAGINAS
+const pageHome = new Dom().el("#page__home")
 
 
-    } else if (pageProduto) {
-        document.body.classList.add("body__materiais")
-        // const categorias = document.querySelector(".cursos__categoria")
-        // 
-        AOS.init({
-            offset: 30,
-        });
+
+//escopo de cada page
+function escopoPages() {
+
+    if (pageHome) { //page HOME
+        new Dom().bodyClass("body__home")
     }
-}
+    //  else if (pageEmpresa) { //page EMPRESA
+    //     new Dom().bodyClass("body__empresa")
 
-verificacao()
-
-
-
-
-
-
-
-
-
-
-
-// MENU ==================================
-function menuPreenchido() {
-    const menuFixo = document.querySelectorAll(".menu");
-
-    menuFixo.forEach((i) => {
-        if (window.pageYOffset >= 120) {
-            document.body.classList.add("ativo__scroll");
-
-        } else if (window.pageYOffset < 200) {
-            document.body.classList.remove("ativo__scroll");
-        }
-    });
-}
-menuPreenchido();
-
-
-/* abre & fecha menu  */
-const menuItem = document.querySelector(".menu__icon-click")
-const linksMenu = document.querySelector(".atalhos")
-const mediaQuery = window.matchMedia('(min-width: 992px)')
-
-function menuMobile() {
-    if (!mediaQuery.matches && !document.body.classList.contains("menu__open")) {
-        document.body.classList.add("menu__open");
-
-    } else if (document.body.classList.contains("menu__open")) {
-
-        linksMenu.setAttribute(
-            "style",
-            "animation: voltaMenu 250ms both ease-out;"
-        );
-        setTimeout(() => {
-            linksMenu.removeAttribute("style", "animation");
-            document.body.classList.remove("menu__open");
-        }, 250);
-    }
-}
-
-
-/* FECHA MENU SE CLICAR PARTE PRETA */
-function fechaMenuMobile(click) {
-    const partePreta = document.querySelector(".fundo__black")
-    if (document.body.classList.contains("menu__open") && click.target == partePreta) {
-        linksMenu.setAttribute(
-            "style",
-            "animation: voltaMenu 250ms both ease-out;"
-        );
-        setTimeout(() => {
-            linksMenu.removeAttribute("style", "animation");
-            document.body.classList.remove("menu__open");
-        }, 250);
-    }
+    // } 
 
 }
-
-
-// add classe DROP MOBILE 
-const dropMobile = document.querySelector(".menu__dropdown-mobile")
-dropMobile.addEventListener("click", function (event) {
-    event.preventDefault();
-    dropMobile.classList.toggle("abre")
-})
+escopoPages();
 
 
 
-//botao teste
-const buttonss = document.querySelectorAll('a');
-buttonss.forEach(function (button) {
-    button.addEventListener('click', function (event) {
-        // event.preventDefault()
-        let x = event.clientX - event.target.getBoundingClientRect().x;
-        let y = event.clientY - event.target.getBoundingClientRect().y;
-        console.log(event.clientY, event.target.offsetLeft, y);
-
-        let rippleElement = document.createElement('span');
-        rippleElement.style.left = x + 'px';
-        rippleElement.style.top = "-" + y + 'px';
-
-        this.appendChild(rippleElement);
-        setTimeout(function () {
-            rippleElement.remove();
-        }, 600);
-    });
-});
-
-//eventos =======================================
-menuItem.addEventListener("click", menuMobile)
-document.body.addEventListener("click", fechaMenuMobile)
-window.addEventListener("scroll", menuPreenchido);
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.body.classList.add("dcl")
-});
+
+
+
+
+
+
+// Dom
+//  .add("classe")  add class
+//  .remove("classe")  remove class
+//  .toggle("classe")  toggle class
+//  .has("classe")  verifica class
+
+//  .el() retorna elemento
+//  .elements node list
+//  .addClassAll("classe") class nodelist
+
+
+//  .bodyClass("classe") add class no body
+//  .bodyToggle("classe") Toggle class no body
+//  .bodyRemove("classe") remove class no body

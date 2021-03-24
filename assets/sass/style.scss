@@ -1,6 +1,4 @@
-// FONTE
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
-
+@import "../sass/color__font";
 @import "../sass/variaves__mixins"; //VARIAVEIS E MIXINS
 @import "bootstrap__imports"; //BOOTSTRAP
 
@@ -11,14 +9,16 @@
 @import "../sass/utilities/animation"; // animation
 
 //COMPONENTS GERAIS
+// @import "../sass/components/footer";
 @import "../sass/components/menu";
-@import "../sass/components/footer";
 
 body {
   overflow-x: hidden;
-  @include scrollbars(5px, $primaria, rgb(238, 238, 238));
+  // @include scrollbars(5px, $primaria, rgb(238, 238, 238));
   transition: opacity 0.3s ease;
-  opacity: 0;
+  opacity: 1;
+  height: 4000px; //RETIRARRRRRR
+  font-family: $inter;
 }
 
 body,
@@ -27,26 +27,10 @@ select {
   @include font;
 }
 
-body.dcl {
-  opacity: 1;
-}
+// body.dcl {
+//   opacity: 1;
+// }
 
 .body__home {
   @import "../sass/pages/page__home";
-}
-
-.body__empresa {
-  @import "../sass/pages/page__empresa";
-}
-
-.body__aluno {
-  @import "../sass/pages/page__aluno";
-}
-
-.body__instituicoes {
-  @import "../sass/pages/page__instituicoes";
-}
-
-.body__materiais {
-  @import "../sass/pages/page__materiais";
 }
