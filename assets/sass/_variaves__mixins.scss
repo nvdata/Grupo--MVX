@@ -119,7 +119,7 @@
     @if $min-size-left == false {
       #{$property}:$max-size; 
       #{$property}:#{"min(max(#{$min-size}, #{$scaler}), #{$max-size})"}; 
-      #{$property}:clamp($min-size, $scaler, $max-size);
+      #{$property}:clamp(#{$min-size},#{$scaler}, #{$max-size});
      
     } @else if $min-size-left == 0 or $min-size-left == auto{
       #{$property}:$max-size $min-size-left; 
