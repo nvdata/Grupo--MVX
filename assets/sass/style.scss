@@ -19,6 +19,16 @@ body {
   opacity: 1;
   height: 4000px; //RETIRARRRRRR
   font-family: $inter;
+  background: #f4f4f4;
+}
+
+
+::-moz-selection {
+  background: $cor-1;
+}
+
+::selection {
+  background: $cor-1;
 }
 
 body,

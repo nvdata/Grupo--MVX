@@ -1,6 +1,5 @@
 // import animacaoHome from './modules/animation.js'; //animacao full scroll da home
-// import * as config from './modules/swiper__props.js'; //Configs do Swiper
-
+import * as config from './modules/swiper__props.js'; //Configs do Swiper
 import Dom from './modules/constructors.js'; //selecionar elementos e gerenciar classes
 import menu from './modules/menu.js'; //js do menu
 // import result from "./modules/detect-browser.js";
@@ -19,6 +18,9 @@ function escopoPages() {
 
     if (pageHome) { //page HOME
         new Dom().bodyClass("body__home")
+        new Swiper(".swiper-container-1", config.props);
+        new Swiper(".swiper-container-2", config.props);
+
     }
     //  else if (pageEmpresa) { //page EMPRESA
     //     new Dom().bodyClass("body__empresa")
