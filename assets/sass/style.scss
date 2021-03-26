@@ -12,16 +12,21 @@
 // @import "../sass/components/footer";
 @import "../sass/components/menu";
 
+
+
 body {
   overflow-x: hidden;
   @include scrollbars(8px, $cor-1, rgb(238, 238, 238));
   transition: opacity 0.3s ease;
-  opacity: 1;
+  opacity: 0;
   height: 4000px; //RETIRARRRRRR
   font-family: $inter;
-  background: #f4f4f4;
+  background: $cinza-fundo;
 }
 
+body.dcl {
+  opacity: 1;
+}
 
 ::-moz-selection {
   background: $cor-1;

@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <title>Grupo MVX</title>
 
@@ -27,7 +27,7 @@
                     <div class=" intro__text">
                         <h2>Grupo MVX</h2>
                         <h1>
-                            <div class="clique">Clique</div>, <div class="compre">compre</div> &<br>
+                            <div class="clique">Clique</div>, <div class="compre">compre </div> &<br>
                             <span>
                                 <div class="receba">receba</div><strong>
                                     <div class="interoga">!</div>
@@ -172,8 +172,12 @@
                             </div>
 
                         </div>
+                        <div class="swiper__buttons">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
                     </div>
-
+                    <!-- 
                     <div class="swiper-container-2">
                         <div class="swiper-wrapper">
 
@@ -263,7 +267,40 @@
                             </div>
 
                         </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="marcas__action marcas" id="marcas__action">
+            <div class="container">
+                <div class="action__container">
+
+                    <div class="prizi active" data-action="prizi">
+                        <span></span>
+                        <p>1. Prizi</p>
                     </div>
+
+                    <div class="mania__virtual" data-action="mania__virtual">
+                        <span></span>
+                        <p>2. Mania Virtual</p>
+                    </div>
+
+                    <div class="aqui__pneus" data-action="aqui__pneus">
+                        <span></span>
+                        <p>3. Aqui Pneus</p>
+                    </div>
+
+                    <div class="rei__metais" data-action="rei__metais">
+                        <span></span>
+                        <p>4. Rei Dos Metais</p>
+                    </div>
+
+                    <div class="mundo__cadeiras" data-action="mundo__cadeiras">
+                        <span></span>
+                        <p>5. Mundo Das Cadeiras</p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -366,7 +403,7 @@
     <!-- swiper carousel -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- JS FRONT -->
-    <script type="module" src="assets/js/main.js"></script>
+
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
         integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
@@ -375,91 +412,7 @@
         integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q=="
         crossorigin="anonymous"></script>
 
-
-
-    <script>
-        const timeLine = new TimelineMax();
-        const timeLine2 = new TimelineMax();
-        const clique = document.querySelector(".clique")
-        const compre = document.querySelector(".compre")
-        const receba = document.querySelector(".receba")
-        const ornamentos = document.querySelectorAll(".ornamentos")
-
-        const interoga = document.querySelector(".interoga")
-
-
-        // timeLine2
-        //     .set(ornamentos, {
-        //         scale: 0,
-        //         transformOrigin: "left bottom"
-        //     })
-        //     .to(ornamentos, {
-        //         scale: 1,
-        //         transformOrigin: "left bottom"
-        //     }, "-=.5")
-
-        timeLine2.staggerFromTo(ornamentos, .5, {
-            scale: .2,
-            transformOrigin: "left bottom",
-            ease: "power3",
-        }, {
-            scale: 1,
-            delay: 2,
-        });
-
-
-        timeLine
-            .from(clique, .5, {
-                scale: 1,
-                transformOrigin: "center",
-
-            })
-            .set(clique, {
-                scale: 0,
-                transformOrigin: "center",
-                backgroundColor: "#7055FA",
-            })
-            .to(clique, .5, {
-                scale: 1,
-                // delay: .5,
-            })
-            .to(clique, .5, {
-                backgroundColor: "transparent",
-            })
-            .set(compre, {
-                scale: 3,
-                transformOrigin: "center",
-            })
-            .to(compre, .3, {
-                scale: 1,
-            })
-            .to(interoga, .2, {
-                rotate: "40deg",
-                transformOrigin: "bottom center"
-            },"+=.6" )
-            .to(interoga, .2, {
-                rotate: 0,
-            })
-            .to(interoga, .2, {
-                rotate: "-40deg",
-                transformOrigin: "bottom center"
-            }, )
-            .to(interoga, .2, {
-                rotate: 0,
-            })
-
-
-
-        /* .set(compre, {
-            scale: 0,
-            transformOrigin: "left bottom"
-        }, "-=.5")
-        .to(compre, .5, {
-            scale: 1,
-            transformOrigin: "left bottom"
-        }) */
-    </script>
-
+    <script type="module" src="assets/js/main.js"></script>
 
 
 </body>

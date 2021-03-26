@@ -11,7 +11,7 @@
     --container-padding: 0 15px;
 
     /* MENU DESKTOP  ==================*/
-    --menu-bg: white;
+    --menu-bg: #{$cinza-fundo};
     --menu-position: fixed;
     --logo-height: 60px;
     --menu-paddingY: 30px 0 30px;
@@ -26,13 +26,13 @@
     --font-links: 16px;
 
     /* BOTAO */
-    --btn-bg: #e7e7e7;
+    --btn-bg:#{ $cor-1};
     --btn-bg-hover:#{ $cor-1};
-    --btn-border: 45px;
+    --btn-border: 0px;
     --btn-padding: 8px 25px;
-    --btn-color: BLACK;
+    --btn-color: white;
     --btn-color-hover: white;
-    --btn-weight: 700;
+    --btn-weight: 500;
 
     /* DROPDOWN */
     --drop-border: 6px;
@@ -345,7 +345,7 @@ a.menu__btn:hover {
         @include bg-props-contain;
         display: block;
         @include size(300px);
-        position: absolute;      
+        position: absolute;
         background-image: url(../img/fundo-logo.svg);
         right: -120px;
     }

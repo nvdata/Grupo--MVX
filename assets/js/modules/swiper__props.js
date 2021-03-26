@@ -20,8 +20,8 @@ const props = {
     centeredSlides: false,
 
     navigation: {
-        nextEl: '.glide__arrow--right',
-        prevEl: '.glide__arrow--left',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     breakpoints: {
         320: {
