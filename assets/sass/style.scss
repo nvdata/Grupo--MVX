@@ -41,6 +41,11 @@ select {
   @include font;
 }
 
+//pages
 .body__home {
   @import "../sass/pages/page__home";
+}
+
+.body__empresa-mania {
+  @import "../sass/pages/page__empresa-mania";
 }

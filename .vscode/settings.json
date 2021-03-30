@@ -1,6 +1,6 @@
 {
-    
-    
+
+
     // SASS COMPILE ============================================
     "liveSassCompile.settings.formats": [{
             "format": "compressed", //compressed or expanded 
@@ -42,6 +42,7 @@
     "editor.wordWrap": "on",
     "scss.showErrors": true,
     "html-css-class-completion.enableScssFindUsage": true,
+  
 }
 
 

@@ -72,7 +72,7 @@ export function animationIntro() {
         .to(interoga, .2, {
             rotate: "-40deg",
             transformOrigin: "bottom center"
-        }, )
+        },)
         .to(interoga, .2, {
             rotate: 0,
         })

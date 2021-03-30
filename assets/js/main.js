@@ -8,6 +8,7 @@ menu(); //executa function do menu
 
 // PAGINAS
 const pageHome = new Dom().el("#page__home")
+const pageEmpresaMania = new Dom().el("#page__empresa-mania")
 
 
 
@@ -16,25 +17,27 @@ const pageHome = new Dom().el("#page__home")
 function escopoPages() {
 
     if (pageHome) { //page HOME
+
+        //swipers
         new Dom().bodyClass("body__home")
         new Swiper(".swiper-container-1", config.props);
         new Swiper(".swiper-container-2", config.props);
         new Swiper(".swiper-container-fornecedores", config.props2);
         new Swiper(".swiper-container-transportadoras", config.props);
 
-        function load() {
+        // animação intro
+        window.addEventListener("load", function () {
             if (document.body.classList.contains("dcl")) {
                 animacao.animationIntro()
             }
-        }
-        window.addEventListener("load", load)
+        })
+        //animação scroll
         animacao.animaAoScroll()
 
-    }
-    //  else if (pageEmpresa) { //page EMPRESA
-    //     new Dom().bodyClass("body__empresa")
+    } else if (pageEmpresaMania) { //mania virtual
+        new Dom().bodyClass("body__empresa-mania")
 
-    // } 
+    }
 
 }
 escopoPages();
