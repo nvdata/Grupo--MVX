@@ -84,6 +84,7 @@
             // font-size: clamp(32px, 6vw, 100px);
             font-weight: 900;
             line-height: 130%;
+            animation: opacidade .3s ease both;
 
             @include d(s) {
                 line-height: 180%;
