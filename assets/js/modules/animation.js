@@ -1,4 +1,4 @@
-export default function animation() {
+export function animationIntro() {
 
     const timeLine = new TimelineMax();
     const timeLine2 = new TimelineMax();
@@ -76,5 +76,69 @@ export default function animation() {
         .to(interoga, .2, {
             rotate: 0,
         })
+
+}
+
+export function animaAoScroll() {
+    gsap.registerPlugin(ScrollTrigger)
+
+    function animateFrom(elem, direction) {
+        direction = direction | 1;
+
+        var x = 0,
+            y = direction * 150;
+        if (elem.classList.contains("animate-left")) {
+            x = -100;
+            y = 0;
+        } else if (elem.classList.contains("animate-right")) {
+            x = 100;
+            y = 0;
+        }
+        gsap.fromTo(elem, {
+            x: x,
+            y: y,
+            autoAlpha: 0,
+
+        }, {
+            duration: 1.1,
+            x: 0,
+            y: 0,
+            autoAlpha: 1,
+            ease: "expo",
+            // overwrite: "auto"
+        });
+    }
+
+    function hide(elem) {
+        gsap.set(elem, {
+            autoAlpha: 0
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray(".js__animate").forEach(function (elem) {
+            hide(elem); // assure that the element is hidden when scrolled into view
+
+            ScrollTrigger.create({
+                trigger: elem,
+                // markers: true,
+                onEnter: function () {
+                    animateFrom(elem)
+                },
+                // onEnterBack: function () {
+                //     animateFrom(elem, -1)
+                // },
+                // onLeave: function () {
+                //     hide(elem)
+                // } // assure that the element is hidden when scrolled into view
+            });
+        });
+    });
+
+
+
+
 
 }

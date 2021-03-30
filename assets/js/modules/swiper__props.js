@@ -1,19 +1,22 @@
 export
-// const props = {
-//     loop: true,
-//     effect: 'fade',
-
-//     autoplay: {
-//         delay: 1400,
-//         disableOnInteraction: true,
-//     },
-//     pagination: {
-//         el: '.swiper-pagination',
-//         dynamicBullets: true,
-//     },
-// }
+const props2 = {
+    // loop: true,
+    // effect: 'fade',
+    slidesPerView: "auto",
+    centeredSlides: false,
+    speed: 600,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+}
 
 // Swiper do dica
+export
 const props = {
     slidesPerView: 'auto',
     spaceBetween: 30,
