@@ -22,18 +22,10 @@ body {
   font-family: $inter;
   background: $cinza-fundo;
 
-}
+  &.dcl {
+    opacity: 1;
+  }
 
-body.dcl {
-  opacity: 1;
-}
-
-::-moz-selection {
-  background: $cor-1;
-}
-
-::selection {
-  background: $cor-1;
 }
 
 body,
@@ -42,7 +34,8 @@ select {
   @include font;
 }
 
-//pages
+//pages  🂱
+
 .body__home {
   @import "../sass/pages/page__home";
 }
@@ -52,6 +45,12 @@ select {
   @import "../sass/pages/pages__empresa";
 }
 
+.body__contato {
+  @import "../sass/pages/page__contato";
+
+}
+
+//empresas variantes
 .variante__1 {
   @import "../sass/components/empresas__variaveis";
   @import "../sass/pages/pages__empresa__variante-1";

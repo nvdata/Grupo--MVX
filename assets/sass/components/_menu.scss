@@ -646,3 +646,10 @@ a.menu__btn:hover {
 }
 
 
+::-moz-selection {
+    background: $cor-1;
+}
+
+::selection {
+    background: $cor-1;
+}

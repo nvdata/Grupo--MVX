@@ -213,7 +213,7 @@ export function animacaoIntroEmpresas() {
                 ease: "ease",
 
             }
-        },"-=.8")
+        }, "-=.8")
 
 
 
@@ -283,4 +283,14 @@ function animacaoCirculo() {
     });
 
 
+}
+export function animaContato() {
+    gsap.set(".contato__wrapper", {
+        opacity: 0,
+        y: 200,
+    })
+    gsap.to(".contato__wrapper", 1.2, {
+        opacity: 1,
+        y:0,
+    })
 }

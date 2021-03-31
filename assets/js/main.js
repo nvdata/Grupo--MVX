@@ -9,12 +9,17 @@ menu(); //executa function do menu
 // ★ PAGES ★
 const pageHome = new Dom().el("#page__home")
 const pageEmpresas = new Dom().el("#page__empresas")
-// const pageEmpresasVariante1 = new Dom().el(".variante__1")
+const pageContato = new Dom().el("#page__contato")
+
+const pages = {
+    pageHome,
+    pageEmpresas,
+    pageContato,
+}
 
 function escopoPages() {
 
     if (pageHome) { // ★ HOME 
-
         //swipers
         new Dom().bodyClass("body__home")
         new Swiper(".swiper-container-1", config.props);
@@ -28,8 +33,8 @@ function escopoPages() {
                 animacao.animationIntro()
             }
         })
-        //animação scroll
         animacao.animaAoScroll()
+
 
     } else if (pageEmpresas) { // ★ Empresas
         new Dom().bodyClass("body__empresas")
@@ -37,7 +42,11 @@ function escopoPages() {
         animacao.animacaoIntroEmpresas()
         animacao.animaAoScroll()
 
-    } 
+    } else if (pageContato) { // ★ Contato
+        new Dom().bodyClass("body__contato")
+        animacao.animaContato()
+
+    }
 
 }
 escopoPages();
