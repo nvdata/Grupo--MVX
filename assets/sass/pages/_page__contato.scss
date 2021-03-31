@@ -137,6 +137,7 @@ form {
 
     @include d(m) {
         transform: scale(.9);
+        margin-bottom: 25px;
 
     }
 
@@ -166,7 +167,7 @@ form {
         color: $cor-4;
         font-weight: 300;
         font-size: 15px;
-        transition: .5s ease-in-out;
+        transition: .4s ease-in-out;
         pointer-events: none;
     }
 
@@ -207,6 +208,10 @@ form {
     }
 }
 
+.ultimo {
+    margin-bottom: 10px;
+}
+
 textarea {
     margin: 0px;
     width: 306px;
@@ -239,7 +244,7 @@ textarea:focus {
     position: absolute;
     top: -60%;
     z-index: -1;
-    right: -40px;
+    right: -50px;
 
     @include d(m) {
         position: absolute;

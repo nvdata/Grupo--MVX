@@ -285,12 +285,23 @@ function animacaoCirculo() {
 
 }
 export function animaContato() {
+    const tl = new TimelineMax({
+        paused: false,
+    });
     gsap.set(".contato__wrapper", {
         opacity: 0,
         y: 200,
     })
-    gsap.to(".contato__wrapper", 1.2, {
-        opacity: 1,
-        y:0,
+
+    gsap.set(".contato h1", {
+        x: "100%",
     })
+    tl
+        .to(".contato__wrapper", 1.2, {
+            opacity: 1,
+            y: 0,
+        })
+        .to(".contato h1", .8, {
+            x: 0,
+        },"-=.6")
 }
