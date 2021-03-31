@@ -21,6 +21,7 @@ body {
   opacity: 0;
   font-family: $inter;
   background: $cinza-fundo;
+  
 }
 
 body.dcl {
@@ -46,6 +47,6 @@ select {
   @import "../sass/pages/page__home";
 }
 
-.body__empresa-mania {
-  @import "../sass/pages/page__empresa-mania";
+.body__empresas {
+  @import "../sass/pages/pages__empresa";
 }

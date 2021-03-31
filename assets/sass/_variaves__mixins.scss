@@ -114,6 +114,14 @@
         width: 130px;
     }
 }
+@mixin pseudo($p:initial) {
+    content: "";
+    display: block;
+    @include bg-props-contain;
+    position: $p;
+    pointer-events: none;
+
+}
 
 @mixin clamp($property, $min-size, $scaler, $max-size, $min-size-left:false, $scaler-left:false, $max-size-left:false){
     @if $min-size-left == false {

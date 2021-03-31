@@ -1,0 +1,263 @@
+@import "../components/empresas__intro.scss";
+
+.menu {
+    background: transparent;
+}
+
+&.ativo__scroll {
+    .menu {
+        background: #f4f4f4eb;
+        backdrop-filter: blur(20px);
+    }
+}
+
+
+$cor-destaque:rgba(251, 194, 0, 1);
+$roxo-claro:#7E75EA;
+
+.intro {
+    @include empresas__intro;
+}
+
+// & {
+//     height: 10000px;
+// }
+
+.detail {
+    padding-top: 160px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 40px;
+
+    &:after {
+        @include pseudo(absolute);
+        width: 20vw;
+        height: 300px;
+        background-image: url(../img/Left-1.svg);
+        right: -30px;
+        top: -50px;
+
+    }
+
+    &:before {
+        @include pseudo(absolute);
+        width: 20vw;
+        height: 300px;
+        background-image: url(../img/right-1.svg);
+        left: -30px;
+        top: -50px;
+
+    }
+
+
+    h1 {
+        font-size: 42px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 25px;
+
+        @include d(m) {
+            font-size: 32px
+        }
+
+        @include d(s) {
+            font-size: 28px
+        }
+    }
+
+    p {
+        @include clamp("font-size", 14px, 1.5vw, 18px);
+        font-weight: 500;
+        text-align: center;
+        line-height: 145%;
+        max-width: 900px;
+        margin: 10px auto;
+
+    }
+}
+
+.number {
+@include d(m){
+    margin-bottom: 40px;
+}
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__item {
+        padding: 90px 0;
+        text-align: center;
+        flex-direction: column;
+        display: flex;
+
+        @include d(m) {
+            padding: 0;
+            margin: 10px;
+        }
+
+        h2 {
+            font-weight: 700;
+            padding: 0 0 15px;
+            color: $cor-2;
+            margin: 0;
+            display: inline-block;
+            max-width: 250px;
+            margin: 0 auto;
+            font-size: 22px;
+
+            @include d(m) {
+                font-size: 18px;
+            }
+        }
+
+        h3 {
+            margin: 0;
+            display: inline-block;
+
+            font-weight: 500;
+            font-size: 20px;
+            padding: 0 0 15px;
+            color: $cor-4;
+        }
+
+        h4 {
+            margin: 0;
+            display: inline-block;
+
+            font-weight: 500;
+            font-size: 16px;
+            color: $cor-2;
+            max-width: 120px;
+            margin: 0 auto;
+            line-height: 145%;
+            position: absolute;
+            left: 23px;
+            top: 50px;
+        }
+
+        h5 {
+            font-size: 12px;
+            font-weight: 500;
+            color: $cor-4;
+            position: absolute;
+            bottom: 48px;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+        }
+    }
+
+    .circulo {
+        @include size(170px);
+        position: relative;
+        margin: 0 auto;
+
+        svg {
+            position: relative;
+            @include size(150px);
+            z-index: 10;
+            transform: rotate(-68deg);
+
+            circle {
+                @include size(100%);
+                fill: none;
+                stroke: #e7e7e7;
+                stroke-width: 10;
+                stroke-linecap: round;
+                transform: translate(5px, 5px);
+                transition: .3s ease;
+
+                &:nth-child(2) {
+                    stroke-dasharray: 1000;
+                    stroke-dashoffset: -445;
+                }
+
+                &:nth-child(2) {
+                    stroke: #5efa51;
+                }
+            }
+
+
+        }
+
+
+    }
+
+    .item__2 {
+        h4 {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 55px;
+
+        }
+
+        svg.svg-2 {
+            circle {
+                &:nth-child(2) {
+                    stroke: #FBE200;
+                }
+            }
+
+
+        }
+
+
+    }
+
+    .item__3 {
+
+        h4 {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 55px;
+        }
+
+        svg.svg-3 {
+            circle {
+                &:nth-child(2) {
+                    stroke: #7055FA;
+                }
+            }
+
+
+        }
+
+
+    }
+
+}
+
+
+.call {
+    margin-bottom: 80px;
+    .container {
+        display: flex;
+        a {
+            border: 1px solid $cor-2;
+            padding: 10px 45px;
+            letter-spacing: .5px;
+            font-weight: 500;
+            transition: background .3s ease-in-out;
+            display: inline-block;
+            margin: 10px auto;
+
+            &:hover {
+                background: $cor-1;
+                color: white;
+                border: 1px solid rgba(0, 0, 0, .3);
+            }
+
+            @include d(m) {
+                margin: 0 auto;
+                display: block;
+                max-width: 200px;
+            }
+        }
+    }
+}

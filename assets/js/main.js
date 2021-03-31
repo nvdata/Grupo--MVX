@@ -1,22 +1,18 @@
 import * as config from './modules/swiper__props.js'; //Configs do Swiper
-import Dom from './modules/constructors.js'; //selecionar elementos e gerenciar classes
+import Dom from './modules/constructors.js'; //selecionar elementos
 import menu from './modules/menu.js'; //js do menu
 import * as animacao from './modules/animation.js';
 
 menu(); //executa function do menu
 
 
-// PAGINAS
+// ★ PAGES ★
 const pageHome = new Dom().el("#page__home")
-const pageEmpresaMania = new Dom().el("#page__empresa-mania")
+const pageEmpresaMania = new Dom().el("#page__empresas")
 
-
-
-
-//escopo de cada page
 function escopoPages() {
 
-    if (pageHome) { //page HOME
+    if (pageHome) { // ★ HOME 
 
         //swipers
         new Dom().bodyClass("body__home")
@@ -34,9 +30,12 @@ function escopoPages() {
         //animação scroll
         animacao.animaAoScroll()
 
-    } else if (pageEmpresaMania) { //mania virtual
-        new Dom().bodyClass("body__empresa-mania")
-
+    } else if (pageEmpresaMania) { // ★ Empresas
+        new Dom().bodyClass("body__empresas")
+        animacao.animacaoCirculo()
+        animacao.animacaoIntroEmpresas()
+        animacao.animaAoScroll()
+      
     }
 
 }
