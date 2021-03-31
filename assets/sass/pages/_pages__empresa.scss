@@ -12,8 +12,6 @@
 }
 
 
-$cor-destaque:rgba(251, 194, 0, 1);
-$roxo-claro:#7E75EA;
 
 .intro {
     @include empresas__intro;
@@ -33,7 +31,7 @@ $roxo-claro:#7E75EA;
         @include pseudo(absolute);
         width: 20vw;
         height: 300px;
-        background-image: url(../img/Left-1.svg);
+        background-image: $detail-1;
         right: -30px;
         top: -50px;
 
@@ -43,7 +41,7 @@ $roxo-claro:#7E75EA;
         @include pseudo(absolute);
         width: 20vw;
         height: 300px;
-        background-image: url(../img/right-1.svg);
+        background-image: $detail-2;
         left: -30px;
         top: -50px;
 
@@ -77,9 +75,10 @@ $roxo-claro:#7E75EA;
 }
 
 .number {
-@include d(m){
-    margin-bottom: 40px;
-}
+    @include d(m) {
+        margin-bottom: 40px;
+    }
+
     &__wrapper {
         display: flex;
         align-items: center;
@@ -176,8 +175,9 @@ $roxo-claro:#7E75EA;
                     stroke-dashoffset: -445;
                 }
 
+
                 &:nth-child(2) {
-                    stroke: #5efa51;
+                    stroke: $verde;
                 }
             }
 
@@ -199,7 +199,7 @@ $roxo-claro:#7E75EA;
         svg.svg-2 {
             circle {
                 &:nth-child(2) {
-                    stroke: #FBE200;
+                    stroke: $cor-destaque;
                 }
             }
 
@@ -221,7 +221,7 @@ $roxo-claro:#7E75EA;
         svg.svg-3 {
             circle {
                 &:nth-child(2) {
-                    stroke: #7055FA;
+                    stroke: $cor-1;
                 }
             }
 
@@ -236,8 +236,10 @@ $roxo-claro:#7E75EA;
 
 .call {
     margin-bottom: 80px;
+
     .container {
         display: flex;
+
         a {
             border: 1px solid $cor-2;
             padding: 10px 45px;

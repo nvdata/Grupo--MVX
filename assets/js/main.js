@@ -8,7 +8,8 @@ menu(); //executa function do menu
 
 // ★ PAGES ★
 const pageHome = new Dom().el("#page__home")
-const pageEmpresaMania = new Dom().el("#page__empresas")
+const pageEmpresas = new Dom().el("#page__empresas")
+// const pageEmpresasVariante1 = new Dom().el(".variante__1")
 
 function escopoPages() {
 
@@ -30,13 +31,13 @@ function escopoPages() {
         //animação scroll
         animacao.animaAoScroll()
 
-    } else if (pageEmpresaMania) { // ★ Empresas
+    } else if (pageEmpresas) { // ★ Empresas
         new Dom().bodyClass("body__empresas")
         animacao.animacaoCirculo()
         animacao.animacaoIntroEmpresas()
         animacao.animaAoScroll()
-      
-    }
+
+    } 
 
 }
 escopoPages();

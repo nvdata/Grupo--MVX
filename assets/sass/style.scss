@@ -21,7 +21,7 @@ body {
   opacity: 0;
   font-family: $inter;
   background: $cinza-fundo;
-  
+
 }
 
 body.dcl {
@@ -48,5 +48,13 @@ select {
 }
 
 .body__empresas {
+  @import "../sass/components/empresas__variaveis";
   @import "../sass/pages/pages__empresa";
+}
+
+.variante__1 {
+  @import "../sass/components/empresas__variaveis";
+  @import "../sass/pages/pages__empresa__variante-1";
+  @import "../sass/pages/pages__empresa";
+
 }
