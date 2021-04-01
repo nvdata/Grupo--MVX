@@ -45,7 +45,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 710px;
+        min-height: 640px;
 
         @include d(m) {
             flex-direction: column;
@@ -149,7 +149,7 @@ form {
         border: 1px solid rgba(0, 0, 0, 0.95);
         border-radius: 3px;
         background: transparent;
-        padding: 10px;
+        padding: 13px;
         outline: none;
         color: $cor-2;
         font-weight: 400;
@@ -160,7 +160,7 @@ form {
 
     span {
         position: absolute;
-        top: 1px;
+        top: 5px;
         left: 30px;
         padding: 10px;
         display: inline-block;
@@ -199,7 +199,7 @@ form {
 
     ion-icon {
         position: absolute;
-        top: -5px;
+        top: 0px;
         bottom: 0;
         margin: auto 0;
         left: 10px;

@@ -116,6 +116,7 @@
                     font-weight: 500;
                     transition: background .3s ease-in-out;
                     display: inline-block;
+                    will-change: transform;
 
                     &:hover {
                         background: $cor-1;

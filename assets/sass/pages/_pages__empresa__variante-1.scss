@@ -1,5 +1,3 @@
-
-
 //intro.
 $bola-1: url(../img/bola-azul.svg);
 $bola-2: url(../img/bola-vemelha.svg);
@@ -12,3 +10,160 @@ $roxo-claro:#EA7575;
 $verde:#5efa51;
 $detail-1:url(../img/Left-2.svg);
 $detail-2:url(../img/right-2.svg);
+$azul-claro:#D5F5FC;
+
+.number {
+    display: none;
+}
+
+& {
+    overflow: hidden;
+}
+
+@mixin carouselSoluções {
+    padding: 120px 0 40px;
+
+    @include d(m) {
+        padding: 40px 0 40px;
+    }
+
+    h1 {
+        @include clamp("font-size", 28px, 5vw, 42px);
+        font-weight: 700;
+        color: $cor-2;
+        display: inline-block;
+        margin-bottom: 35px;
+        position: relative;
+
+        @include d(m) {
+            margin-bottom: 20px;
+        }
+
+        &:after {
+            @include pseudo(absolute);
+            height: 150px;
+            width: 1px;
+            position: absolute;
+            left: -25px;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__container {
+        h2 {
+            @include clamp("font-size", 24px, 5vw, 28px);
+            font-weight: 600;
+            margin-bottom: 25px;
+
+            @include d(m) {
+                margin-bottom: 20px;
+            }
+        }
+
+        p {
+            max-width: 700px;
+
+            @include d(m) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .swiper-container-1 {
+        padding-top: 60px;
+
+        // overflow: hidden;
+        @include d(m) {
+            padding-top: 25px;
+        }
+
+        .slide__item {
+            // @include clamp("width", 320px, 35vw, 500px);
+            width: 330px;
+            position: relative;
+
+            @include d(m) {
+                width: 250px;
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 145%;
+                max-width: 300px;
+
+                @include d(m) {
+                    max-width: 230px;
+                    font-size: 16PX;
+                }
+            }
+
+            .produto {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                position: relative;
+                // bottom: -20px;
+                width: 22vw;
+                max-width: 450px;
+                min-width: 250px;
+                height: 240px;
+
+                @include d(m) {
+                    height: 200px;
+                }
+
+                &:after {
+                    @include pseudo(absolute);
+                    width: 85%;
+                    height: 85%;
+                    display: block;
+                    background: $azul-claro;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto 0;
+                    z-index: -2;
+                }
+
+                img {
+                    max-width: 90%;
+                    max-height: 280px;
+                    object-fit: contain;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+$component-name: "solucoes";
+
+.#{$component-name} {
+    @include carouselSoluções;
+    @include d(m) {
+        padding: 40px 0 40px;
+    }
+
+}
+
+$component-name: "solucoes-office";
+
+.#{$component-name} {
+    @include carouselSoluções;
+    @include d(m) {
+        padding: 40px 0 40px;
+    }
+}
+
+$component-name: "solucoes-gamer";
+
+.#{$component-name} {
+    @include carouselSoluções;
+    @include d(m) {
+        padding: 40px 0 40px;
+    }
+
+}

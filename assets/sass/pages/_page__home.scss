@@ -469,20 +469,30 @@
 
         @include d(m) {
             height: 40px;
-            width: 100%;
+            width: 92%;
             flex-direction: row;
             top: 0;
             padding-bottom: 0;
-            margin-top: 40px;
             justify-content: flex-start;
             max-width: initial;
             align-items: center;
+
+            margin-top: 45px;
+            justify-content: center;
+            position: initial;
+            padding: 0;
         }
 
         img {
             margin-bottom: 30px;
             width: 100px;
             object-fit: contain;
+
+            @include d(m) {
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+
         }
 
         .btn {
@@ -501,7 +511,7 @@
 
             @include d(m) {
                 margin-left: auto;
-                margin-right: 15px;
+                margin-right: 35px;
             }
 
             &:hover {
@@ -582,24 +592,24 @@
     .swiper-slide {
         // width: 550px !important;
         @include clamp("width", 320px, 35vw, 500px);
+
+        @include d(ss) {
+            transform: scale(.8);
+        }
     }
 
 
     .swiper-wrapper {
         padding-bottom: 60px;
+        padding-left: 10px;
     }
 
     .swiper-container-1 {
         position: relative;
     }
 
-    .mania__virtual {
-        .slide__container {
-            &:after {
-                background: $azul;
-            }
-        }
-    }
+
+
 }
 
 &.dcl {
@@ -648,9 +658,38 @@ $cinza-medio:#D4D4D4;
     .action__container {
         display: flex;
 
+        @include d(m) {
+            position: relative;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+            @include scrollbars(6px, $cor-3, $cinza-fundo);
+            padding-bottom: 10px;
+            justify-content: flex-start;
+            padding-top: 50px;
+
+            &:after {
+                content: "→ ";
+                display: block;
+                width: 20px;
+                height: 10px;
+                color: #7c7c7c;
+                position: absolute;
+                bottom: 10px;
+                animation: seta 2s alternate ease-in-out infinite;
+                font-size: 18px;
+            }
+        }
+
         div {
             cursor: pointer;
             padding: 5px;
+
+            @include d(m) {
+                min-width: 120px;
+                font-size: 14px;
+            }
 
             span {
                 width: 100%;
@@ -669,6 +708,7 @@ $cinza-medio:#D4D4D4;
                     position: absolute;
                     top: -35px;
                     filter: brightness(0.6);
+
                 }
             }
         }
@@ -721,63 +761,11 @@ $vermelho-pneu:#ff0e0e;
     }
 
 
-}
-
-
-.action__container div.active {
-
-    &[data-action="prizi"] {
-        p {
-            color: $vermelho;
-        }
-
-        span {
-            background: $vermelho;
-            width: 120px;
-
-            &:after {
-                content: "";
-                @include bg-props-contain;
-                top: -35px;
-                filter: brightness(0);
-            }
-        }
-    }
-
-    &[data-action="mania__virtual"] {
-        p {
-            color: $azul;
-        }
-
-        span {
-            background: $azul;
-
-            &:after {
-                top: -40px;
-                background-image: url(../img/mania.png);
-                filter: brightness(0);
-            }
-        }
-    }
-
-    &[data-action="aqui__pneus"] {
-        p {
-            color: $vermelho-pneu;
-        }
-
-        span {
-            background: $vermelho-pneu;
-
-            &:after {
-                top: -40px;
-                background-image: url(../img/aquipneus.png);
-                filter: brightness(0);
-            }
-        }
-    }
 
 
 }
+
+
 
 
 @media (max-width: 1441px) and (min-width:1200px) {
@@ -1092,9 +1080,12 @@ $vermelho-pneu:#ff0e0e;
         @include clamp("font-size", 32px, 5vw, 82px);
         font-weight: 700;
         color: white;
+        max-width: 400px;
+        display: inline-block;
 
         @include d(m) {
             text-align: center;
+            margin: 0 auto;
             margin-bottom: 30px;
         }
     }
@@ -1129,11 +1120,13 @@ $vermelho-pneu:#ff0e0e;
 
 // noticias
 .noticias {
+    margin-bottom: 60px;
     h1 {
         @include clamp("font-size", 32px, 5vw, 42px);
         margin: 40px 0 30px;
         font-weight: 700;
         font-family: $gilroy;
+        display: inline-block;
     }
 
     &__wrapper {
@@ -1217,6 +1210,201 @@ $vermelho-pneu:#ff0e0e;
                 color: white;
                 border: 1px solid rgba(0, 0, 0, 0.3);
             }
+        }
+    }
+}
+
+/* carouseis produtos */
+
+.action__container div {
+
+    &[data-action="prizi"] {
+        span {
+            width: 120px;
+
+            &:after {
+                background-image: url(../img/prizi.png);
+            }
+        }
+    }
+
+    &[data-action="mania__virtual"] {
+        span {
+            &:after {
+                top: -40px;
+                background-image: url(../img/mania.png);
+
+            }
+        }
+    }
+
+    &[data-action="aqui__pneus"] {
+
+        span {
+            &:after {
+                top: -40px;
+                background-image: url(../img/aquipneus.png);
+
+            }
+        }
+    }
+
+    &[data-action="mundo__cadeiras"] {
+
+        span {
+            &:after {
+                top: -40px;
+                background-image: url(../img/cadeiras.svg);
+            }
+        }
+    }
+
+    &[data-action="rei__metais"] {
+
+        span {
+            &:after {
+                height: 45px;
+                top: -42px;
+                background-image: url(../img/metais.png);
+            }
+        }
+    }
+}
+
+
+
+
+$cadeiras:#3ec0b9;
+$metais-color:#707c73;
+$pneus-vermelho: #fb0303;
+
+.action__container div.active {
+
+    &[data-action="prizi"] {
+        p {
+            color: $vermelho;
+        }
+
+        span {
+            background: $vermelho;
+            width: 120px;
+
+            &:after {
+                content: "";
+                @include bg-props-contain;
+                top: -35px;
+                filter: brightness(0);
+            }
+        }
+    }
+
+    &[data-action="mania__virtual"] {
+        p {
+            color: $azul;
+        }
+
+        span {
+            background: $azul;
+
+            &:after {
+                top: -40px;
+                filter: brightness(0);
+            }
+        }
+    }
+
+    &[data-action="aqui__pneus"] {
+        p {
+            color: $vermelho-pneu;
+        }
+
+        span {
+            background: $vermelho-pneu;
+
+            &:after {
+                top: -40px;
+                filter: brightness(0);
+            }
+        }
+    }
+
+
+
+    &[data-action="mundo__cadeiras"] {
+        p {
+            color: $cadeiras;
+        }
+
+        span {
+            background: $cadeiras;
+
+            &:after {
+                top: -40px;
+                filter: brightness(0);
+            }
+        }
+    }
+
+
+    &[data-action="rei__metais"] {
+        p {
+            color: $metais-color;
+        }
+
+        span {
+            background: $metais-color;
+
+            &:after {
+                filter: brightness(0);
+            }
+        }
+    }
+
+
+}
+
+.marcas {
+    &__wrapper {
+        overflow: hidden;
+        height: 420px;
+
+        @include d(m) {
+            height: 320px;
+        }
+    }
+
+    .mania__virtual {
+        &:after {
+            background: $azul !important;
+
+        }
+    }
+
+    .aqui__pneus {
+        &:after {
+            background: $pneus-vermelho !important;
+
+        }
+    }
+
+    .rei__metais {
+        &:after {
+            background: $metais-color !important;
+
+        }
+
+        .info {
+            img {
+                margin-left: 10px;
+                width: 70px;
+            }
+        }
+    }
+
+    .mundo__cadeiras {
+        &:after {
+            background: $cadeiras !important;
+
         }
     }
 }
