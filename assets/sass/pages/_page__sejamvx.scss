@@ -31,6 +31,10 @@ ul {
         height: 300px;
         right: -150px;
         top: 80px;
+
+        @include d(m) {
+            right: -20px;
+        }
     }
 
     h1 {
