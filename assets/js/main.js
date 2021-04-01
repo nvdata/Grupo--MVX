@@ -3,6 +3,7 @@ import Dom from './modules/constructors.js'; //selecionar elementos
 import menu from './modules/menu.js'; //js do menu
 import * as animacao from './modules/animation.js';
 import * as carouselClick from './modules/carousel-change.js';
+import vemBootstrap from './modules/botstrapimport.js';
 
 menu(); //executa function do menu
 
@@ -11,6 +12,7 @@ menu(); //executa function do menu
 const pageHome = new Dom().el("#page__home")
 const pageEmpresas = new Dom().el("#page__empresas")
 const pageContato = new Dom().el("#page__contato")
+const pageSejaMVX = new Dom().el("#page__sejamvx")
 
 //empresas variantes
 const pageEmpresasVariante1 = new Dom().el(".variante__1")
@@ -19,6 +21,7 @@ const pages = {
     pageHome,
     pageEmpresas,
     pageContato,
+    pageSejaMVX,
 }
 
 function escopoPages() {
@@ -26,13 +29,16 @@ function escopoPages() {
     if (pageHome) { // ★ HOME 
         //swipers
         new Dom().bodyClass("body__home")
-        new Swiper(".swiper-container-1", config.props);
+        const swiper1 = new Swiper(".swiper-container-1", config.props);
+
         new Swiper(".swiper-container-2", config.props);
         new Swiper(".swiper-container-3", config.props);
         new Swiper(".swiper-container-4", config.props);
         new Swiper(".swiper-container-5", config.props);
         new Swiper(".swiper-container-fornecedores", config.props2);
         new Swiper(".swiper-container-transportadoras", config.propstrans);
+
+        console.log(swiper1);
 
         // animação intro
         window.addEventListener("load", function () {
@@ -59,6 +65,10 @@ function escopoPages() {
     } else if (pageContato) { // ★ Contato
         new Dom().bodyClass("body__contato")
         animacao.animaContato()
+
+    } else if (pageSejaMVX) {
+        new Dom().bodyClass("body__sejamvx")
+        vemBootstrap()
 
     }
 

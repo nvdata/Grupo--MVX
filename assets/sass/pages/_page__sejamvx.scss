@@ -1,0 +1,204 @@
+.menu {
+    background: transparent;
+}
+
+&.ativo__scroll {
+    .menu {
+        // background: $cinza-fundo;
+        background: #f4f4f4eb;
+        backdrop-filter: blur(20px);
+    }
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+ul {
+    margin: 0;
+}
+
+.sejamvx {
+    padding-top: 160px;
+    padding-bottom: 120px;
+    overflow: hidden;
+    position: relative;
+
+    &:after {
+        @include pseudo(absolute);
+        background-image: url(../img/vagas.svg);
+        width: 20vw;
+        height: 300px;
+        right: -150px;
+        top: 80px;
+    }
+
+    h1 {
+        margin-top: 30px;
+        text-align: center;
+        color: $cor-2;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 80px;
+        width: max-content;
+        font-family: $gilroy;
+
+        @include d(m) {
+            max-width: 280px;
+            font-size: 32px;
+        }
+
+        &:after {
+            @include pseudo(absolute);
+            height: 70%;
+            width: 1px;
+            background: rgb(209, 209, 209);
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: -10px;
+
+            @include d(m) {
+                height: 100%;
+            }
+        }
+    }
+
+    .card {
+        border: none;
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #bebebe;
+
+        @include d(m) {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        span {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+
+            letter-spacing: 0.1px;
+            text-transform: capitalize;
+
+            color: #545454;
+
+            @include d(m) {
+                margin-top: 10px;
+            }
+        }
+
+        .ver__mais {
+            margin-left: auto;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            color: $cor-1;
+
+            ion-icon {
+                margin-left: 5px;
+                font-weight: 600;
+
+            }
+
+            @include d(m) {
+                @include d(m) {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+
+    }
+
+    .card-body {
+        padding-bottom: 40px;
+
+        h3 {
+            color: $cor-1;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            color: #3D3D3D;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        h5 {
+            font-family: $gilroy;
+            color: $cor-2;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $cor-2;
+
+            @include d(m) {
+                font-size: 14px;
+            }
+        }
+
+        ul {
+            li {
+                display: list-item;
+                margin-left: 30px;
+                list-style: initial;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+
+                @include d(m) {
+                    font-size: 14px;
+                    line-height: 145%;
+                    margin-bottom: 5px;
+
+                }
+            }
+        }
+    }
+
+    .enviar__cv {
+        padding: 10px 15px;
+        max-width: 190px;
+        text-align: center;
+        margin-top: 35px;
+        transition: .3s ease;
+        background: $cor-1;
+        color: white !important;
+        font-weight: 600;
+
+        &:hover {
+            background: rgb(61, 23, 255);
+        }
+
+
+    }
+
+}
