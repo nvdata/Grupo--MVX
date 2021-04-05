@@ -62,7 +62,7 @@
     &__text {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        // justify-content: flex-end;
         margin-top: 50px;
         color: $cor-2;
         font-family: $inter;
@@ -1050,6 +1050,10 @@ $vermelho-pneu:#ff0e0e;
 .transportadora {
     padding-top: 140px;
 
+    @include d(m) {
+        padding-top: 80px;
+    }
+
     h1 {
         text-align: center;
         margin-bottom: 30px;
@@ -1085,8 +1089,9 @@ $vermelho-pneu:#ff0e0e;
 
         @include d(m) {
             text-align: center;
-            margin: 0 auto;
-            margin-bottom: 30px;
+            margin: 0 auto 30px;
+            width: max-content;
+            display: grid;
         }
     }
 

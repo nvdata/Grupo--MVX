@@ -74,7 +74,8 @@ function escopoPages() {
 
     } else if (pageGrupo) {
         new Dom().bodyClass("body__grupomvx")
-
+        animacao.animaAoScroll()
+        carouselClick.clickChange()
     }
 
 }

@@ -13,6 +13,10 @@
 .intro {
     margin-top: 180px;
 
+    @include d(m) {
+        margin-top: 120px;
+    }
+
     .textos {
         h1 {
             font-family: $gilroy;
@@ -49,6 +53,25 @@
         background: $cor-1;
         margin-top: 40px;
         margin-bottom: 40px;
+        position: relative;
+
+        &:after {
+            @include pseudo(absolute);
+            width: 100%;
+            height: 100%;
+            bottom: -20px;
+            left: -20px;
+            background: rgba(112, 85, 250, 0.38);
+            z-index: -1;
+
+        }
+
+        @include d(m) {
+            height: 100%;
+            padding: 30px 0;
+            width: 100%;
+
+        }
 
         .container {
             height: 100%;
@@ -62,6 +85,10 @@
         justify-content: space-around;
         width: 100%;
 
+        @include d(m) {
+            flex-wrap: wrap;
+        }
+
         picture {
             display: grid;
             background: #4C12BC;
@@ -69,6 +96,10 @@
             place-items: center;
             @include size(120px);
             cursor: pointer;
+
+            @include d(m) {
+                margin: 15px;
+            }
 
             img {
                 @include size(80px);
@@ -80,6 +111,153 @@
                 border: 6px solid white;
             }
 
+
+        }
+    }
+}
+
+.sobre__empresa {
+
+    &-wrapper {
+        margin-bottom: 30px;
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+
+        @include d(m) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        h1 {
+            font-family: $gilroy;
+            font-weight: 700;
+            font-size: 42px;
+
+            letter-spacing: 0.6px;
+            color: #FFFFFF;
+            background: $cor-1;
+            width: max-content;
+            padding: 3px 5px;
+            margin-bottom: 30px;
+
+            @include d(m) {
+                font-size: 26px;
+                width: 280px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 145%;
+
+            @include d(m) {
+                font-size: 14px;
+            }
+        }
+
+        img {
+            @include d(m) {
+                margin: 10px auto;
+            }
+        }
+    }
+
+    .ver-site {
+        border: 1px solid $cor-2;
+        padding: 10px 45px;
+        letter-spacing: .5px;
+        font-weight: 500;
+        transition: background .3s ease-in-out;
+        display: inline-block;
+        margin: 35px auto 10px;
+
+        &:hover {
+            background: $cor-1;
+            color: white;
+            border: 1px solid rgba(0, 0, 0, .3);
+        }
+
+        @include d(m) {
+            margin: 0 auto;
+            display: block;
+            max-width: 200px;
+        }
+    }
+
+    .col-12 {
+        display: inline-flex;
+        justify-content: center;
+
+    }
+}
+
+footer {
+    margin-top: 160px;
+}
+
+@keyframes vemXuxu {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+.sobre__empresa {
+    .container__sobre {
+        >div:not(.active) {
+            display: none;
+        }
+
+        div.active {
+            display: flex;
+            animation: vemXuxu .8s ease both;
+        }
+    }
+}
+
+
+$cadeiras:#3ec0b9;
+$metais-color:#707c73;
+$pneus-vermelho: #fb0303;
+
+.container__sobre {
+    [data-action="mania__virtual"] {
+        h1 {
+            background: $azul;
+        }
+    }
+
+    [data-action="mundo__cadeiras"] {
+        h1 {
+            background: $cadeiras;
+        }
+    }
+
+    [data-action="prizi"] {
+        h1 {
+            background: $vermelho;
+        }
+    }
+
+    [data-action="rei__metais"] {
+        h1 {
+            background: $metais-color;
+
+        }
+    }
+
+    [data-action="aqui__pneus"] {
+
+        h1 {
+            background: $pneus-vermelho;
 
         }
     }
