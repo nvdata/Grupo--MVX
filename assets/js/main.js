@@ -13,6 +13,7 @@ const pageHome = new Dom().el("#page__home")
 const pageEmpresas = new Dom().el("#page__empresas")
 const pageContato = new Dom().el("#page__contato")
 const pageSejaMVX = new Dom().el("#page__sejamvx")
+const pageGrupo = new Dom().el("#page__grupomvx")
 
 //empresas variantes
 const pageEmpresasVariante1 = new Dom().el(".variante__1")
@@ -22,6 +23,7 @@ const pages = {
     pageEmpresas,
     pageContato,
     pageSejaMVX,
+    pageGrupo
 }
 
 function escopoPages() {
@@ -69,6 +71,9 @@ function escopoPages() {
     } else if (pageSejaMVX) {
         new Dom().bodyClass("body__sejamvx")
         vemBootstrap()
+
+    } else if (pageGrupo) {
+        new Dom().bodyClass("body__grupomvx")
 
     }
 

@@ -62,7 +62,7 @@
     &__text {
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: flex-end;
         margin-top: 50px;
         color: $cor-2;
         font-family: $inter;
@@ -1121,6 +1121,7 @@ $vermelho-pneu:#ff0e0e;
 // noticias
 .noticias {
     margin-bottom: 60px;
+
     h1 {
         @include clamp("font-size", 32px, 5vw, 42px);
         margin: 40px 0 30px;

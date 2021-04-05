@@ -41,11 +41,8 @@ export function carouselMuda() {
 
     }
 
-
     clickItems.forEach((i) => {
         i.addEventListener("click", trocaCarousel)
-
-
 
     })
 }

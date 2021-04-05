@@ -55,6 +55,11 @@ select {
 
 }
 
+.body__grupomvx {
+  @import "../sass/pages/page__grupo";
+
+}
+
 //empresas variantes
 .variante__1 {
   @import "../sass/components/empresas__variaveis";
